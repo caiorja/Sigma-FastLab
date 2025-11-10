@@ -1,10 +1,10 @@
 table dim_area_laboratorial
-	lineageTag: 5f56ac4c-2604-4334-b08d-96633a3bbe2d
+	lineageTag: d039719f-74cb-4c09-9b75-024028bddd5f
 
 	column id_area
 		dataType: int64
 		formatString: 0
-		lineageTag: 5acf34cf-5ee6-4c13-954c-47e93e15a5ce
+		lineageTag: f0222a54-c1a2-4088-8038-68149ead3f29
 		summarizeBy: none
 		sourceColumn: id_area
 
@@ -12,7 +12,7 @@ table dim_area_laboratorial
 
 	column nome_area
 		dataType: string
-		lineageTag: a6071890-3713-4759-95fe-98764758f30d
+		lineageTag: 9ee787f7-24a8-4542-bb91-1335c20f978e
 		summarizeBy: none
 		sourceColumn: nome_area
 
@@ -20,7 +20,7 @@ table dim_area_laboratorial
 
 	column descricao
 		dataType: string
-		lineageTag: a34ecb61-eae2-4f8d-893b-9bed857852fa
+		lineageTag: 7dc14d65-9d4d-4fa8-8eb6-6c47f018a9d4
 		summarizeBy: none
 		sourceColumn: descricao
 

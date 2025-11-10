@@ -1,10 +1,10 @@
 table dim_responsavel
-	lineageTag: bb4a9950-efe6-49db-a7e1-d1d11cfd66c5
+	lineageTag: 5eb5c065-2f6c-4740-9760-e0bce7188a38
 
 	column id_funcionario
 		dataType: int64
 		formatString: 0
-		lineageTag: 5b79a165-acf8-458b-9f40-e7d5e02adecf
+		lineageTag: 08dbf1bd-1875-431a-ac90-c95566dba9ad
 		summarizeBy: none
 		sourceColumn: id_funcionario
 
@@ -12,7 +12,7 @@ table dim_responsavel
 
 	column nome
 		dataType: string
-		lineageTag: f972edcd-7e99-4d7b-9767-49f288152946
+		lineageTag: 7c193676-5e62-43a9-a161-16da3530ae20
 		summarizeBy: none
 		sourceColumn: nome
 
@@ -20,7 +20,7 @@ table dim_responsavel
 
 	column cargo
 		dataType: string
-		lineageTag: 7403dbbf-631a-4120-bdc3-f83c6466ef45
+		lineageTag: b5254e3d-7132-4a53-b903-9d18763ae727
 		summarizeBy: none
 		sourceColumn: cargo
 
@@ -28,7 +28,7 @@ table dim_responsavel
 
 	column setor
 		dataType: string
-		lineageTag: 285d9cc8-ae85-4d07-91c4-2c6d8b39e168
+		lineageTag: 1789b854-16c2-4a1b-9760-73ced83f52c9
 		summarizeBy: none
 		sourceColumn: setor
 
@@ -36,7 +36,7 @@ table dim_responsavel
 
 	column nivel_hierarquico
 		dataType: string
-		lineageTag: b18fa6bb-ba91-4b1d-b628-c589b37707c2
+		lineageTag: 05693d5b-647a-4fe6-9da3-065ef987ca91
 		summarizeBy: none
 		sourceColumn: nivel_hierarquico
 
@@ -44,7 +44,7 @@ table dim_responsavel
 
 	column chefe_imediato
 		dataType: string
-		lineageTag: 9b2ec432-d8c1-40a7-9ec8-456e632472dd
+		lineageTag: 40deceee-7e17-4482-933a-d31b9f62b056
 		summarizeBy: none
 		sourceColumn: chefe_imediato
 
@@ -52,7 +52,7 @@ table dim_responsavel
 
 	column turno
 		dataType: string
-		lineageTag: 498e9654-0f6d-4922-addd-085bd4c266cd
+		lineageTag: b7af6bb8-d77e-44d2-aa1e-5ef6adf41b0d
 		summarizeBy: none
 		sourceColumn: turno
 
@@ -61,14 +61,14 @@ table dim_responsavel
 	column data_admissao
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 3fee9c1c-cbe8-4caf-9cb6-8eb7633d6b6f
+		lineageTag: 9a4444d6-c172-4395-9466-6aa5f9d9e806
 		summarizeBy: none
 		sourceColumn: data_admissao
 
 		variation Variation
 			isDefault
-			relationship: d2137917-1140-41ad-b976-6c72b9c5a7c6
-			defaultHierarchy: LocalDateTable_e2f0765d-be0b-40aa-9c97-da0fbe489e07.'Hierarquia de datas'
+			relationship: c8ec6ae5-a7cf-4fa9-96d8-f60fe8bb35d0
+			defaultHierarchy: LocalDateTable_21f8ca49-d004-44ec-8fbe-db1a941fb3d8.'Hierarquia de datas'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -77,14 +77,14 @@ table dim_responsavel
 	column data_desligamento
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: cdb8a159-4b64-46fd-b4f7-e24d6f92fb74
+		lineageTag: 57f052d4-4cff-415b-8cfa-32f54063c2a5
 		summarizeBy: none
 		sourceColumn: data_desligamento
 
 		variation Variation
 			isDefault
-			relationship: 923ae6a9-1cde-4115-89cd-2e0a6c7f4173
-			defaultHierarchy: LocalDateTable_5fe21522-fb2d-4281-87b9-14371b467352.'Hierarquia de datas'
+			relationship: 6e8e2aaf-cd1a-46b7-97ae-bb77d32727a1
+			defaultHierarchy: LocalDateTable_2facc141-189c-4113-85f2-012ea7249f34.'Hierarquia de datas'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -92,7 +92,7 @@ table dim_responsavel
 
 	column status
 		dataType: string
-		lineageTag: 3d885ff2-9c7f-49f0-9813-a5f55dd07a4b
+		lineageTag: b6b3cd92-1167-4668-bca2-8c9e7657dffd
 		summarizeBy: none
 		sourceColumn: status
 
@@ -100,7 +100,7 @@ table dim_responsavel
 
 	column tempo_casa_anos
 		dataType: double
-		lineageTag: ac87e1f9-b1f3-4986-aab7-ef68efcaad0b
+		lineageTag: 0c0f026c-7615-4d8e-82dc-df06bb92cca2
 		summarizeBy: sum
 		sourceColumn: tempo_casa_anos
 
@@ -110,7 +110,7 @@ table dim_responsavel
 
 	column registro_crbio
 		dataType: string
-		lineageTag: 091f33b2-3672-43d5-8d68-5912b962a290
+		lineageTag: 5bccd56c-f790-41cd-81df-ccd8202432fa
 		summarizeBy: none
 		sourceColumn: registro_crbio
 
@@ -118,7 +118,7 @@ table dim_responsavel
 
 	column especialidade
 		dataType: string
-		lineageTag: 06fd5c59-26ab-4167-a3e9-7a033b1f740a
+		lineageTag: 29ed36d6-bfa5-4c71-8951-10f3addac2c1
 		summarizeBy: none
 		sourceColumn: especialidade
 
@@ -127,7 +127,7 @@ table dim_responsavel
 	column ativo_lab
 		dataType: boolean
 		formatString: """TRUE"";""TRUE"";""FALSE"""
-		lineageTag: ea13be72-af32-454b-b4e3-5e94259c3610
+		lineageTag: fc0c7e68-cbc4-41ab-bc04-6e0ee46f5821
 		summarizeBy: none
 		sourceColumn: ativo_lab
 

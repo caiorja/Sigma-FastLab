@@ -1,10 +1,10 @@
 table dim_paciente
-	lineageTag: 68798049-6064-4405-9291-93577cda86bb
+	lineageTag: 752b4a9d-4ad8-4643-a7f6-adf0fe94fe0c
 
 	column id_paciente
 		dataType: int64
 		formatString: 0
-		lineageTag: c04989a9-a0a7-4bac-a441-e9abe493c7bf
+		lineageTag: 65571eb0-608b-49e2-a9e7-6e8361dbc2a3
 		summarizeBy: none
 		sourceColumn: id_paciente
 
@@ -12,7 +12,7 @@ table dim_paciente
 
 	column nome
 		dataType: string
-		lineageTag: e0cc6e0a-2296-47c5-ac4c-fd3c70efd6e5
+		lineageTag: c7b27ea3-eec0-4fc7-aa47-47714b091b55
 		summarizeBy: none
 		sourceColumn: nome
 
@@ -20,7 +20,7 @@ table dim_paciente
 
 	column sexo
 		dataType: string
-		lineageTag: f40608be-4f68-4df0-bdca-26bc90008d6b
+		lineageTag: d441e76e-7a4c-44ce-91d5-045916d9baa8
 		summarizeBy: none
 		sourceColumn: sexo
 
@@ -29,15 +29,15 @@ table dim_paciente
 	column idade
 		dataType: int64
 		formatString: 0
-		lineageTag: 217e6813-79c5-4d4b-bcad-1f97a91d6f87
-		summarizeBy: sum
+		lineageTag: 1f022ee9-0bd4-4ce3-88ea-a5adfabf17b7
+		summarizeBy: none
 		sourceColumn: idade
 
 		annotation SummarizationSetBy = Automatic
 
 	column cidade
 		dataType: string
-		lineageTag: d14d0831-ab29-4801-9893-d52bd1483a41
+		lineageTag: b415dcfa-34ce-4357-ba88-ceff733c0f3a
 		summarizeBy: none
 		sourceColumn: cidade
 
@@ -45,7 +45,7 @@ table dim_paciente
 
 	column estado
 		dataType: string
-		lineageTag: b9e8b800-2577-4020-9ab0-fd181282f4d8
+		lineageTag: b6d90800-1471-4357-8f1d-3458414d64d2
 		summarizeBy: none
 		sourceColumn: estado
 
@@ -53,7 +53,7 @@ table dim_paciente
 
 	column telefone
 		dataType: string
-		lineageTag: 5d7ce9d0-00f3-40d8-8910-ba72339c9f8c
+		lineageTag: 0e14542a-fbd3-4f9b-9598-245946bede86
 		summarizeBy: none
 		sourceColumn: telefone
 
@@ -61,7 +61,7 @@ table dim_paciente
 
 	column email
 		dataType: string
-		lineageTag: 090ac805-e503-4737-bf30-d0edb6c8c5ea
+		lineageTag: 01b6f61b-3b54-4ef6-aa4d-fcf08b5ef3fb
 		summarizeBy: none
 		sourceColumn: email
 

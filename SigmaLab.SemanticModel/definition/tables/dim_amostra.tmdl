@@ -1,18 +1,18 @@
 table dim_amostra
-	lineageTag: 67383d55-170b-499f-bca8-7254fefa48a7
+	lineageTag: 94fb261c-70bb-43ae-a89f-a0a36df9c8e1
 
 	column id_amostra
 		dataType: int64
 		formatString: 0
-		lineageTag: 2d89b65b-b640-4049-883f-c6f87dda64fe
-		summarizeBy: sum
+		lineageTag: a4531637-3ea6-4c98-9cda-a4ee79cefb65
+		summarizeBy: none
 		sourceColumn: id_amostra
 
 		annotation SummarizationSetBy = Automatic
 
 	column tipo_amostra
 		dataType: string
-		lineageTag: 8d63cbfa-2894-43f3-9038-28f65467214c
+		lineageTag: 343c5b68-e799-40f0-96d9-4443ed09fc0b
 		summarizeBy: none
 		sourceColumn: tipo_amostra
 
@@ -20,7 +20,7 @@ table dim_amostra
 
 	column categoria
 		dataType: string
-		lineageTag: a933f4ed-e929-4657-8014-e746eb9cb0f8
+		lineageTag: ba030229-7ade-4253-a1e2-45d960624803
 		summarizeBy: none
 		sourceColumn: categoria
 
@@ -28,7 +28,7 @@ table dim_amostra
 
 	column condicao_transporte
 		dataType: string
-		lineageTag: 749a263c-8512-495d-9e33-42e0478869ee
+		lineageTag: 32550752-44ff-4955-84b7-f45dcdf47ed9
 		summarizeBy: none
 		sourceColumn: condicao_transporte
 
@@ -37,15 +37,15 @@ table dim_amostra
 	column tempo_max_transporte_h
 		dataType: int64
 		formatString: 0
-		lineageTag: 5e7c98a5-db50-42fd-9d42-9ee98c25e87d
-		summarizeBy: sum
+		lineageTag: 903a6638-426d-443b-8463-afa28e10365e
+		summarizeBy: none
 		sourceColumn: tempo_max_transporte_h
 
 		annotation SummarizationSetBy = Automatic
 
 	column descricao
 		dataType: string
-		lineageTag: b3b134a7-60a0-4585-b78f-3c267a4d6ddd
+		lineageTag: bd31c2c7-eb38-4a0a-84bf-1f0a535b4ace
 		summarizeBy: none
 		sourceColumn: descricao
 

@@ -1,18 +1,18 @@
 table dim_equipamento
-	lineageTag: 2584d19d-6da5-4120-b927-1ba3cd0d3840
+	lineageTag: 74d4cf35-38ca-4543-81c0-cecc86d22351
 
 	column id_equipamento
 		dataType: int64
 		formatString: 0
-		lineageTag: 0d2e85e3-89fd-49b7-8bb4-fb5bc9149309
-		summarizeBy: sum
+		lineageTag: de521f1a-a5fb-4e0f-9767-d6970222cb22
+		summarizeBy: none
 		sourceColumn: id_equipamento
 
 		annotation SummarizationSetBy = Automatic
 
 	column nome_equipamento
 		dataType: string
-		lineageTag: df8b504d-4242-472b-ac3e-a956daff699d
+		lineageTag: 245d1fb6-0c46-4cec-a282-86dbb77034c2
 		summarizeBy: none
 		sourceColumn: nome_equipamento
 
@@ -20,7 +20,7 @@ table dim_equipamento
 
 	column fabricante
 		dataType: string
-		lineageTag: bf1fc8d2-6398-4a23-acda-eb931f491aa4
+		lineageTag: 51528b3f-d020-476c-911a-010eb5c69333
 		summarizeBy: none
 		sourceColumn: fabricante
 
@@ -28,7 +28,7 @@ table dim_equipamento
 
 	column modelo
 		dataType: string
-		lineageTag: ef369129-1dd4-42ae-9175-5f14ec5e0781
+		lineageTag: 1ab23924-52a5-4b10-890e-3398f878c59c
 		summarizeBy: none
 		sourceColumn: modelo
 
@@ -36,7 +36,7 @@ table dim_equipamento
 
 	column area_principal
 		dataType: string
-		lineageTag: 4ac7054e-0461-4d7b-af7c-96a855df7361
+		lineageTag: 980b190a-4cdf-4833-9757-da6c797dc614
 		summarizeBy: none
 		sourceColumn: area_principal
 
@@ -45,15 +45,15 @@ table dim_equipamento
 	column capacidade_dia
 		dataType: int64
 		formatString: 0
-		lineageTag: 8871e4a4-82a8-48cb-8979-7b2e5df39788
-		summarizeBy: sum
+		lineageTag: 58513ff4-42d0-4a47-a979-3e4698d6e7f4
+		summarizeBy: none
 		sourceColumn: capacidade_dia
 
 		annotation SummarizationSetBy = Automatic
 
 	column status_operacional
 		dataType: string
-		lineageTag: d505af96-638b-4e41-81da-f2c3a2326410
+		lineageTag: 424e38e5-2512-4268-b393-9f69f992095c
 		summarizeBy: none
 		sourceColumn: status_operacional
 

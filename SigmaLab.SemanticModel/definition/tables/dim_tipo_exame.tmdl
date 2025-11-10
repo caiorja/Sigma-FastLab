@@ -1,10 +1,10 @@
 table dim_tipo_exame
-	lineageTag: 41091ff5-a3a0-4b76-a357-e2718699d806
+	lineageTag: 2f84fe30-0a9b-4e85-b55a-a9bc5e13b583
 
 	column id_tipo_exame
 		dataType: int64
 		formatString: 0
-		lineageTag: 2d902897-e1bb-45f7-99a1-2d8fc2397ee3
+		lineageTag: 3bd70200-fd3a-4a35-a99f-d3e680789c46
 		summarizeBy: none
 		sourceColumn: id_tipo_exame
 
@@ -12,7 +12,7 @@ table dim_tipo_exame
 
 	column tipo_exame
 		dataType: string
-		lineageTag: 4ee34db5-422a-4a00-846f-36687f8dc612
+		lineageTag: 8fa366bb-e10e-4d16-98b0-311bb5535a8e
 		summarizeBy: none
 		sourceColumn: tipo_exame
 
@@ -20,7 +20,7 @@ table dim_tipo_exame
 
 	column area
 		dataType: string
-		lineageTag: f02f7c26-402e-4a09-b927-37115b2c9dba
+		lineageTag: 93784294-d406-4408-86c4-a597c201fdfd
 		summarizeBy: none
 		sourceColumn: area
 
@@ -29,7 +29,7 @@ table dim_tipo_exame
 	column tempo_medio_horas
 		dataType: int64
 		formatString: 0
-		lineageTag: bb9c1f5f-d405-4a26-93fc-3dff722a8eb5
+		lineageTag: bdc148ac-26ab-4657-9439-38d1e4b384f0
 		summarizeBy: none
 		sourceColumn: tempo_medio_horas
 
@@ -37,7 +37,7 @@ table dim_tipo_exame
 
 	column observacao
 		dataType: string
-		lineageTag: 2a32e701-0bb8-465a-abe4-177c1fb4f05e
+		lineageTag: 7f6c7ffa-1208-41e9-9fe2-0df69400415a
 		summarizeBy: none
 		sourceColumn: observacao
 
