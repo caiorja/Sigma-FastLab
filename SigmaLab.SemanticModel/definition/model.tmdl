@@ -1,0 +1,62 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup Fato
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup Dim
+
+	annotation PBI_QueryGroupOrder = 1
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["dim_amostra","dim_atendente","dim_area_laboratorial","dim_canal_atendimento","dim_canal_contato","dim_categoria_reclamacao","dim_centro_custo","dim_coleta","dim_entregador","dim_equipamento","dim_funcionario","dim_paciente","dim_responsavel","dim_rota","dim_setor","dim_tempo","dim_tipo_despesa","dim_tipo_exame","dim_unidade","fato_exame","dim_veiculo","fato_reclamacao"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table dim_amostra
+ref table dim_atendente
+ref table DateTableTemplate_c1e6bbc9-0b50-4f71-9718-f681f3e5277d
+ref table LocalDateTable_cb8cdf73-34f6-4fa7-91d8-6d980df65260
+ref table LocalDateTable_a95c7168-b113-4cd9-8e6b-72fa9409227c
+ref table dim_area_laboratorial
+ref table dim_canal_atendimento
+ref table dim_canal_contato
+ref table dim_categoria_reclamacao
+ref table dim_centro_custo
+ref table dim_coleta
+ref table LocalDateTable_ccf99fc9-0e2b-4a04-bcf5-3133523de8da
+ref table dim_entregador
+ref table LocalDateTable_e9479175-359a-4fa2-b750-15256f55ade0
+ref table LocalDateTable_1744e03c-6638-4b53-9d54-465cd532a9fa
+ref table dim_equipamento
+ref table dim_funcionario
+ref table LocalDateTable_1f44c683-b186-4138-8aaa-e60fc63def19
+ref table LocalDateTable_34e03353-8534-4da1-a793-7e4e809163a1
+ref table dim_paciente
+ref table dim_responsavel
+ref table LocalDateTable_e2f0765d-be0b-40aa-9c97-da0fbe489e07
+ref table LocalDateTable_5fe21522-fb2d-4281-87b9-14371b467352
+ref table dim_rota
+ref table dim_setor
+ref table dim_tempo
+ref table LocalDateTable_e86d5444-b058-43c9-a09e-e0b50de276da
+ref table dim_tipo_despesa
+ref table dim_tipo_exame
+ref table dim_unidade
+ref table fato_exame
+ref table LocalDateTable_5b42aa2d-1209-4add-9674-b366a72da115
+ref table LocalDateTable_6628f294-4697-4fc3-9edf-6627cdfb3f14
+ref table dim_veiculo
+ref table fato_reclamacao
+ref table LocalDateTable_8d2ff7cc-054e-44a3-8caf-ad1250e61f74
+ref table LocalDateTable_562e1011-a7aa-40fe-8eff-f8934d9cd363
+
+ref cultureInfo pt-BR
+

@@ -1,0 +1,78 @@
+table dim_rota
+	lineageTag: 9605a1f9-93c0-430b-8108-10fc4ddf8287
+
+	column id_rota
+		dataType: int64
+		formatString: 0
+		lineageTag: a4aa8679-cc50-49c9-a717-fedc2094321e
+		summarizeBy: sum
+		sourceColumn: id_rota
+
+		annotation SummarizationSetBy = Automatic
+
+	column origem
+		dataType: string
+		lineageTag: 4c432edd-079a-4998-9cb1-b82b7113bcec
+		summarizeBy: none
+		sourceColumn: origem
+
+		annotation SummarizationSetBy = Automatic
+
+	column destino
+		dataType: string
+		lineageTag: 61d50425-c3a9-42c7-9848-f7eb5a227509
+		summarizeBy: none
+		sourceColumn: destino
+
+		annotation SummarizationSetBy = Automatic
+
+	column distancia_km
+		dataType: int64
+		formatString: 0
+		lineageTag: 5308ff61-47aa-44cc-8fad-084f6ff6fdd9
+		summarizeBy: sum
+		sourceColumn: distancia_km
+
+		annotation SummarizationSetBy = Automatic
+
+	column tempo_medio_transporte_h
+		dataType: double
+		lineageTag: d6e18e80-a46b-4543-8ff6-802440988449
+		summarizeBy: sum
+		sourceColumn: tempo_medio_transporte_h
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column tipo_rota
+		dataType: string
+		lineageTag: becc0fc1-7e91-4dc5-b560-bfb581600080
+		summarizeBy: none
+		sourceColumn: tipo_rota
+
+		annotation SummarizationSetBy = Automatic
+
+	column frequencia_diaria
+		dataType: int64
+		formatString: 0
+		lineageTag: 9638dfcf-df96-417c-aa5b-e0d6af847153
+		summarizeBy: sum
+		sourceColumn: frequencia_diaria
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_rota = m
+		mode: import
+		queryGroup: Dim
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost:5432", "fastlab"),
+				    fast_dim_rota = Fonte{[Schema="fast",Item="dim_rota"]}[Data]
+				in
+				    fast_dim_rota
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

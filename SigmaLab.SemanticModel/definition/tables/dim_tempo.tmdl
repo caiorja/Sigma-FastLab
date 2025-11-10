@@ -1,0 +1,137 @@
+table dim_tempo
+	lineageTag: cde8cfd2-54db-4f30-8f0e-5814034a8f0c
+
+	column id_data
+		dataType: int64
+		formatString: 0
+		lineageTag: abe12f5b-4c42-45e3-90b8-3ac1cec38501
+		summarizeBy: sum
+		sourceColumn: id_data
+
+		annotation SummarizationSetBy = Automatic
+
+	column data
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 75951798-5257-4c61-9276-10ae2f9b51c7
+		summarizeBy: none
+		sourceColumn: data
+
+		variation Variation
+			isDefault
+			relationship: 90df9919-3042-4517-b872-52e4c6d647c1
+			defaultHierarchy: LocalDateTable_e86d5444-b058-43c9-a09e-e0b50de276da.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ano
+		dataType: int64
+		formatString: 0
+		lineageTag: d2ef62b0-e075-441d-a030-ffec3a4598af
+		summarizeBy: sum
+		sourceColumn: ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		formatString: 0
+		lineageTag: 1f86c401-cb3c-4213-8cf0-6b94813cf081
+		summarizeBy: sum
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_mes
+		dataType: string
+		lineageTag: ea6bf147-2bc8-453f-9c24-3202df0cc441
+		summarizeBy: none
+		sourceColumn: nome_mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia
+		dataType: int64
+		formatString: 0
+		lineageTag: 08125dd1-5123-4431-a759-03df4ab06c23
+		summarizeBy: sum
+		sourceColumn: dia
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia_semana
+		dataType: string
+		lineageTag: d7e24059-130d-4943-9c64-b1fad182273d
+		summarizeBy: none
+		sourceColumn: dia_semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column trimestre
+		dataType: int64
+		formatString: 0
+		lineageTag: a86b4ac3-c77e-4c36-8f19-713d6c479c53
+		summarizeBy: sum
+		sourceColumn: trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column semana_ano
+		dataType: int64
+		formatString: 0
+		lineageTag: b2d75e1b-a435-4737-af4c-17bb4faabfea
+		summarizeBy: sum
+		sourceColumn: semana_ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column fim_semana
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3f4083f8-b8b3-44b0-884f-1e7872e7b513
+		summarizeBy: none
+		sourceColumn: fim_semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column feriado
+		dataType: int64
+		formatString: 0
+		lineageTag: 570d403e-5d7a-411f-b5d2-cddf2e9cea61
+		summarizeBy: sum
+		sourceColumn: feriado
+
+		annotation SummarizationSetBy = Automatic
+
+	column inicio_comercial
+		dataType: string
+		lineageTag: cb66602c-1097-4262-83ac-471161751342
+		summarizeBy: none
+		sourceColumn: inicio_comercial
+
+		annotation SummarizationSetBy = Automatic
+
+	column fim_comercial
+		dataType: string
+		lineageTag: 8b384fae-3c83-48d8-b51c-b034ba6ba1b3
+		summarizeBy: none
+		sourceColumn: fim_comercial
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_tempo = m
+		mode: import
+		queryGroup: Dim
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost:5432", "fastlab"),
+				    fast_dim_tempo = Fonte{[Schema="fast",Item="dim_tempo"]}[Data]
+				in
+				    fast_dim_tempo
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

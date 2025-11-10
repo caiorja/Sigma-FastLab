@@ -1,0 +1,50 @@
+table dim_tipo_despesa
+	lineageTag: f240d331-f65f-45de-9fa4-345ffd025a0c
+
+	column id_tipo_despesa
+		dataType: int64
+		formatString: 0
+		lineageTag: ffee50c0-657e-474b-9d9b-45782c7c665e
+		summarizeBy: sum
+		sourceColumn: id_tipo_despesa
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_tipo_despesa
+		dataType: string
+		lineageTag: 305b6a30-2176-484c-acb6-9b238808a506
+		summarizeBy: none
+		sourceColumn: nome_tipo_despesa
+
+		annotation SummarizationSetBy = Automatic
+
+	column categoria
+		dataType: string
+		lineageTag: a84fc932-bbf6-42ad-92fd-c93e08c8b3dd
+		summarizeBy: none
+		sourceColumn: categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricao
+		dataType: string
+		lineageTag: 8377775d-c31b-40b3-8d4d-01128418d17a
+		summarizeBy: none
+		sourceColumn: descricao
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_tipo_despesa = m
+		mode: import
+		queryGroup: Dim
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost:5432", "fastlab"),
+				    fast_dim_tipo_despesa = Fonte{[Schema="fast",Item="dim_tipo_despesa"]}[Data]
+				in
+				    fast_dim_tipo_despesa
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

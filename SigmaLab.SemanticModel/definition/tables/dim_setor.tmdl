@@ -1,0 +1,50 @@
+table dim_setor
+	lineageTag: 2db1feef-2b2f-4e3e-9816-457acaff80b0
+
+	column id_setor
+		dataType: int64
+		formatString: 0
+		lineageTag: 17e290eb-e684-437b-8061-ee09473debbc
+		summarizeBy: none
+		sourceColumn: id_setor
+
+		annotation SummarizationSetBy = Automatic
+
+	column setor
+		dataType: string
+		lineageTag: bbdcb2ec-7f16-4f3c-9073-73ab4c71cc95
+		summarizeBy: none
+		sourceColumn: setor
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricao
+		dataType: string
+		lineageTag: 53e7db18-a32e-44e2-88da-e2135099f0a2
+		summarizeBy: none
+		sourceColumn: descricao
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_setor
+		dataType: string
+		lineageTag: 478f82ae-426f-47fb-966b-92bc02f1f459
+		summarizeBy: none
+		sourceColumn: tipo_setor
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_setor = m
+		mode: import
+		queryGroup: Dim
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost:5432", "fastlab"),
+				    fast_dim_setor = Fonte{[Schema="fast",Item="dim_setor"]}[Data]
+				in
+				    fast_dim_setor
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

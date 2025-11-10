@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "SigmaLab"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ed74f69e-f28a-4d46-b671-f61b5de5df69"
+  }
+}

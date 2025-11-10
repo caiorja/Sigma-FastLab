@@ -1,0 +1,149 @@
+table dim_responsavel
+	lineageTag: bb4a9950-efe6-49db-a7e1-d1d11cfd66c5
+
+	column id_funcionario
+		dataType: int64
+		formatString: 0
+		lineageTag: 5b79a165-acf8-458b-9f40-e7d5e02adecf
+		summarizeBy: none
+		sourceColumn: id_funcionario
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome
+		dataType: string
+		lineageTag: f972edcd-7e99-4d7b-9767-49f288152946
+		summarizeBy: none
+		sourceColumn: nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column cargo
+		dataType: string
+		lineageTag: 7403dbbf-631a-4120-bdc3-f83c6466ef45
+		summarizeBy: none
+		sourceColumn: cargo
+
+		annotation SummarizationSetBy = Automatic
+
+	column setor
+		dataType: string
+		lineageTag: 285d9cc8-ae85-4d07-91c4-2c6d8b39e168
+		summarizeBy: none
+		sourceColumn: setor
+
+		annotation SummarizationSetBy = Automatic
+
+	column nivel_hierarquico
+		dataType: string
+		lineageTag: b18fa6bb-ba91-4b1d-b628-c589b37707c2
+		summarizeBy: none
+		sourceColumn: nivel_hierarquico
+
+		annotation SummarizationSetBy = Automatic
+
+	column chefe_imediato
+		dataType: string
+		lineageTag: 9b2ec432-d8c1-40a7-9ec8-456e632472dd
+		summarizeBy: none
+		sourceColumn: chefe_imediato
+
+		annotation SummarizationSetBy = Automatic
+
+	column turno
+		dataType: string
+		lineageTag: 498e9654-0f6d-4922-addd-085bd4c266cd
+		summarizeBy: none
+		sourceColumn: turno
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_admissao
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3fee9c1c-cbe8-4caf-9cb6-8eb7633d6b6f
+		summarizeBy: none
+		sourceColumn: data_admissao
+
+		variation Variation
+			isDefault
+			relationship: d2137917-1140-41ad-b976-6c72b9c5a7c6
+			defaultHierarchy: LocalDateTable_e2f0765d-be0b-40aa-9c97-da0fbe489e07.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column data_desligamento
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: cdb8a159-4b64-46fd-b4f7-e24d6f92fb74
+		summarizeBy: none
+		sourceColumn: data_desligamento
+
+		variation Variation
+			isDefault
+			relationship: 923ae6a9-1cde-4115-89cd-2e0a6c7f4173
+			defaultHierarchy: LocalDateTable_5fe21522-fb2d-4281-87b9-14371b467352.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column status
+		dataType: string
+		lineageTag: 3d885ff2-9c7f-49f0-9813-a5f55dd07a4b
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column tempo_casa_anos
+		dataType: double
+		lineageTag: ac87e1f9-b1f3-4986-aab7-ef68efcaad0b
+		summarizeBy: sum
+		sourceColumn: tempo_casa_anos
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column registro_crbio
+		dataType: string
+		lineageTag: 091f33b2-3672-43d5-8d68-5912b962a290
+		summarizeBy: none
+		sourceColumn: registro_crbio
+
+		annotation SummarizationSetBy = Automatic
+
+	column especialidade
+		dataType: string
+		lineageTag: 06fd5c59-26ab-4167-a3e9-7a033b1f740a
+		summarizeBy: none
+		sourceColumn: especialidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column ativo_lab
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: ea13be72-af32-454b-b4e3-5e94259c3610
+		summarizeBy: none
+		sourceColumn: ativo_lab
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_responsavel = m
+		mode: import
+		queryGroup: Dim
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost:5432", "fastlab"),
+				    fast_dim_responsavel = Fonte{[Schema="fast",Item="dim_responsavel"]}[Data]
+				in
+				    fast_dim_responsavel
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

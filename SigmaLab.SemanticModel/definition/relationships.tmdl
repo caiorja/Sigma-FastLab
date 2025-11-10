@@ -1,0 +1,139 @@
+relationship e30dc2b3-1794-47ee-8d4b-769bec31b61f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_atendente.data_admissao
+	toColumn: LocalDateTable_cb8cdf73-34f6-4fa7-91d8-6d980df65260.Date
+
+relationship b1e2f6b5-c72f-45b1-b843-566d350a6aaa
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_atendente.data_desligamento
+	toColumn: LocalDateTable_a95c7168-b113-4cd9-8e6b-72fa9409227c.Date
+
+relationship f8741a97-ebae-4efd-a286-fc6e9421193c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_coleta.data_admissao
+	toColumn: LocalDateTable_ccf99fc9-0e2b-4a04-bcf5-3133523de8da.Date
+
+relationship 1b2f52be-e652-442f-b93f-8b7abe664de2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_entregador.data_admissao
+	toColumn: LocalDateTable_e9479175-359a-4fa2-b750-15256f55ade0.Date
+
+relationship 4bf325c6-359c-4563-8f7f-3b82fe0abff2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_entregador.data_desligamento
+	toColumn: LocalDateTable_1744e03c-6638-4b53-9d54-465cd532a9fa.Date
+
+relationship a17db710-efeb-4d55-8c16-5d08ad33bbff
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_funcionario.data_admissao
+	toColumn: LocalDateTable_1f44c683-b186-4138-8aaa-e60fc63def19.Date
+
+relationship 2594599f-ae27-4906-8781-e01d77d07bd3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_funcionario.data_desligamento
+	toColumn: LocalDateTable_34e03353-8534-4da1-a793-7e4e809163a1.Date
+
+relationship d2137917-1140-41ad-b976-6c72b9c5a7c6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_responsavel.data_admissao
+	toColumn: LocalDateTable_e2f0765d-be0b-40aa-9c97-da0fbe489e07.Date
+
+relationship 923ae6a9-1cde-4115-89cd-2e0a6c7f4173
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_responsavel.data_desligamento
+	toColumn: LocalDateTable_5fe21522-fb2d-4281-87b9-14371b467352.Date
+
+relationship 90df9919-3042-4517-b872-52e4c6d647c1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_tempo.data
+	toColumn: LocalDateTable_e86d5444-b058-43c9-a09e-e0b50de276da.Date
+
+relationship b7ac2bbb-538e-4b73-8ac6-61d43615cb86
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_exame.data_coleta
+	toColumn: LocalDateTable_5b42aa2d-1209-4add-9674-b366a72da115.Date
+
+relationship c98e5ba9-f257-4521-b4df-931305978c39
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_exame.data_entrega
+	toColumn: LocalDateTable_6628f294-4697-4fc3-9edf-6627cdfb3f14.Date
+
+relationship 31bd8011-ea17-4b67-b26d-915d0bae9f2b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_reclamacao.data_abertura
+	toColumn: LocalDateTable_8d2ff7cc-054e-44a3-8caf-ad1250e61f74.Date
+
+relationship 4cbc61c4-5c8a-4860-a371-7f21e274bbc1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_reclamacao.data_fechamento
+	toColumn: LocalDateTable_562e1011-a7aa-40fe-8eff-f8934d9cd363.Date
+
+relationship AutoDetected_8376e232-6bb5-458d-bf84-819d8d6f2685
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: dim_atendente.id_funcionario
+	toColumn: dim_funcionario.id_funcionario
+
+relationship AutoDetected_47d14e08-a232-491e-9420-8ae5b2e1c71a
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: dim_coleta.id_funcionario
+	toColumn: dim_funcionario.id_funcionario
+
+relationship AutoDetected_1fce5152-056f-4b1b-b894-d31018988c59
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: dim_entregador.id_funcionario
+	toColumn: dim_funcionario.id_funcionario
+
+relationship AutoDetected_b86fadd2-1969-42ea-9b9b-975a83f4dc27
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: dim_responsavel.id_funcionario
+	toColumn: dim_funcionario.id_funcionario
+
+relationship AutoDetected_6ae8bce4-67e9-4773-92e8-08b762b61805
+	fromColumn: dim_coleta.setor
+	toColumn: dim_setor.setor
+
+relationship AutoDetected_c2ec5917-2605-4a4b-bdfb-90c18293b522
+	isActive: false
+	fromColumn: dim_funcionario.setor
+	toColumn: dim_setor.setor
+
+relationship AutoDetected_21bee96c-62cc-40f4-9891-81b293b7d4a9
+	fromColumn: fato_exame.id_area
+	toColumn: dim_area_laboratorial.id_area
+
+relationship AutoDetected_8ad306d2-c0fc-4279-b6a0-4252b4f4dcdf
+	fromColumn: fato_reclamacao.id_canal
+	toColumn: dim_canal_atendimento.id_canal
+
+relationship AutoDetected_ad70f0ba-82c0-45f9-b4bb-8886212363d6
+	fromColumn: fato_reclamacao.id_canal_contato
+	toColumn: dim_canal_contato.id_canal_contato
+
+relationship AutoDetected_c659397b-b07f-4882-b0e3-50cd5bc0c46b
+	fromColumn: fato_reclamacao.id_categoria
+	toColumn: dim_categoria_reclamacao.id_categoria
+
+relationship AutoDetected_6909aa00-ea64-48a6-aca0-095ea5570482
+	fromColumn: fato_exame.id_paciente
+	toColumn: dim_paciente.id_paciente
+
+relationship AutoDetected_b215943d-7e7d-4b2e-801d-4ccaf0c2c334
+	fromColumn: fato_reclamacao.id_paciente
+	toColumn: dim_paciente.id_paciente
+
+relationship AutoDetected_ffe4ec58-df08-4d31-98c1-869eadce84c8
+	fromColumn: fato_exame.id_tipo_exame
+	toColumn: dim_tipo_exame.id_tipo_exame
+
+relationship AutoDetected_4193dab5-9cff-4325-9a5d-f213770f0700
+	fromColumn: fato_exame.id_unidade
+	toColumn: dim_unidade.id_unidade
+
+relationship AutoDetected_62cce2ae-5b70-49bf-9481-59210a1c7168
+	fromColumn: fato_reclamacao.id_unidade
+	toColumn: dim_unidade.id_unidade
+

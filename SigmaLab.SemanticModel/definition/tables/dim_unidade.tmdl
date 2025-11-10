@@ -1,0 +1,83 @@
+table dim_unidade
+	lineageTag: 4005a30f-a59d-4216-ac50-9a8bed594433
+
+	column id_unidade
+		dataType: int64
+		formatString: 0
+		lineageTag: 00a36a75-1b9f-4d5b-9b2c-5b67430453f9
+		summarizeBy: none
+		sourceColumn: id_unidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_unidade
+		dataType: string
+		lineageTag: 5fef4fbb-f920-4efc-afb0-b1b31286bb70
+		summarizeBy: none
+		sourceColumn: nome_unidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_unidade
+		dataType: string
+		lineageTag: 3e582245-6bcb-4ae9-b185-b06d5de41048
+		summarizeBy: none
+		sourceColumn: tipo_unidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column cidade
+		dataType: string
+		lineageTag: 71170225-7329-4c7b-8d13-f0bf6f320e77
+		summarizeBy: none
+		sourceColumn: cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado
+		dataType: string
+		lineageTag: a0328b9c-30fc-42ab-8ed1-5f4479f68275
+		summarizeBy: none
+		sourceColumn: estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column endereco
+		dataType: string
+		lineageTag: 9e163476-b34f-4031-89b0-18c008d1c659
+		summarizeBy: none
+		sourceColumn: endereco
+
+		annotation SummarizationSetBy = Automatic
+
+	column responsavel_unidade
+		dataType: string
+		lineageTag: fff657fd-fce3-4585-8be8-2889160ec85a
+		summarizeBy: none
+		sourceColumn: responsavel_unidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column capacidade_diaria
+		dataType: int64
+		formatString: 0
+		lineageTag: d34b24a3-788a-4b30-bc98-1a1a762b481b
+		summarizeBy: sum
+		sourceColumn: capacidade_diaria
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_unidade = m
+		mode: import
+		queryGroup: Dim
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost:5432", "fastlab"),
+				    fast_dim_unidade = Fonte{[Schema="fast",Item="dim_unidade"]}[Data]
+				in
+				    fast_dim_unidade
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

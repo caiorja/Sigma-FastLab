@@ -1,0 +1,119 @@
+table fato_exame
+	lineageTag: ed169c9e-b454-47a5-a8b9-2c519c0102c5
+
+	column data_coleta
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3d2b8a80-7994-481a-86e3-7f4f231eb0f4
+		summarizeBy: none
+		sourceColumn: data_coleta
+
+		variation Variation
+			isDefault
+			relationship: b7ac2bbb-538e-4b73-8ac6-61d43615cb86
+			defaultHierarchy: LocalDateTable_5b42aa2d-1209-4add-9674-b366a72da115.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column id_paciente
+		dataType: int64
+		formatString: 0
+		lineageTag: e58ec162-02a8-4f2e-9832-595b8bbf5eb5
+		summarizeBy: none
+		sourceColumn: id_paciente
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_tipo_exame
+		dataType: int64
+		formatString: 0
+		lineageTag: b4b28cc9-c4f1-4287-8c26-e289cdc0a304
+		summarizeBy: none
+		sourceColumn: id_tipo_exame
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_area
+		dataType: int64
+		formatString: 0
+		lineageTag: 5a739ad4-19d7-4b99-bbc8-1d74eb3c86b3
+		summarizeBy: none
+		sourceColumn: id_area
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_responsavel
+		dataType: int64
+		formatString: 0
+		lineageTag: b82e5660-7822-4f56-99b6-87fae172afc8
+		summarizeBy: sum
+		sourceColumn: id_responsavel
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_unidade
+		dataType: int64
+		formatString: 0
+		lineageTag: 42a65e1b-e59c-4161-8086-6580c87dbffa
+		summarizeBy: none
+		sourceColumn: id_unidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column tempo_processamento_min
+		dataType: int64
+		formatString: 0
+		lineageTag: 561fefee-49f5-49a0-9bf1-ebb5875b3313
+		summarizeBy: sum
+		sourceColumn: tempo_processamento_min
+
+		annotation SummarizationSetBy = Automatic
+
+	column sla_cumprido
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 500aa679-01dd-4caf-a94e-a97a51c86b74
+		summarizeBy: none
+		sourceColumn: sla_cumprido
+
+		annotation SummarizationSetBy = Automatic
+
+	column atraso
+		dataType: int64
+		formatString: 0
+		lineageTag: 98196eb1-fbed-4e82-9a00-5ee7b7c7d2e5
+		summarizeBy: sum
+		sourceColumn: atraso
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_entrega
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 00aff124-066f-4078-85fc-29969c20495d
+		summarizeBy: none
+		sourceColumn: data_entrega
+
+		variation Variation
+			isDefault
+			relationship: c98e5ba9-f257-4521-b4df-931305978c39
+			defaultHierarchy: LocalDateTable_6628f294-4697-4fc3-9edf-6627cdfb3f14.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fato_exame = m
+		mode: import
+		queryGroup: Fato
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost:5432", "fastlab"),
+				    fast_fato_exame = Fonte{[Schema="fast",Item="fato_exame"]}[Data]
+				in
+				    fast_fato_exame
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

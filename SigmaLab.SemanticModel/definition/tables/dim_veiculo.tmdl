@@ -1,0 +1,86 @@
+table dim_veiculo
+	lineageTag: ef128aae-0ffd-4c31-bf2d-c15c5a7bc63d
+
+	column id_veiculo
+		dataType: int64
+		formatString: 0
+		lineageTag: 34b004e3-aaa5-465a-9ad9-d2ee60f75164
+		summarizeBy: sum
+		sourceColumn: id_veiculo
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_veiculo
+		dataType: string
+		lineageTag: 7fae7214-7089-4d8c-9f3f-781c2ae115e7
+		summarizeBy: none
+		sourceColumn: tipo_veiculo
+
+		annotation SummarizationSetBy = Automatic
+
+	column modelo
+		dataType: string
+		lineageTag: ddb4da37-7890-4e4e-8f5c-5d8d2cfc143d
+		summarizeBy: none
+		sourceColumn: modelo
+
+		annotation SummarizationSetBy = Automatic
+
+	column placa
+		dataType: string
+		lineageTag: 9443ba56-34f4-4b77-99b2-72bf09a05619
+		summarizeBy: none
+		sourceColumn: placa
+
+		annotation SummarizationSetBy = Automatic
+
+	column capacidade_caixas
+		dataType: int64
+		formatString: 0
+		lineageTag: 548b2b17-a4f6-4faa-a96f-60ad22cad5c4
+		summarizeBy: sum
+		sourceColumn: capacidade_caixas
+
+		annotation SummarizationSetBy = Automatic
+
+	column refrigerado
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 14953e5b-12ea-429d-87cd-b60c4413b65f
+		summarizeBy: none
+		sourceColumn: refrigerado
+
+		annotation SummarizationSetBy = Automatic
+
+	column consumo_km_l
+		dataType: double
+		lineageTag: 031de435-17ab-45af-8105-cd3b863c3d11
+		summarizeBy: sum
+		sourceColumn: consumo_km_l
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column status_operacional
+		dataType: string
+		lineageTag: bea2a443-c1c0-4846-9daf-f23c12b0296b
+		summarizeBy: none
+		sourceColumn: status_operacional
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_veiculo = m
+		mode: import
+		queryGroup: Dim
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost:5432", "fastlab"),
+				    fast_dim_veiculo = Fonte{[Schema="fast",Item="dim_veiculo"]}[Data]
+				in
+				    fast_dim_veiculo
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

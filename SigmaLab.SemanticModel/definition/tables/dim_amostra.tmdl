@@ -1,0 +1,67 @@
+table dim_amostra
+	lineageTag: 67383d55-170b-499f-bca8-7254fefa48a7
+
+	column id_amostra
+		dataType: int64
+		formatString: 0
+		lineageTag: 2d89b65b-b640-4049-883f-c6f87dda64fe
+		summarizeBy: sum
+		sourceColumn: id_amostra
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_amostra
+		dataType: string
+		lineageTag: 8d63cbfa-2894-43f3-9038-28f65467214c
+		summarizeBy: none
+		sourceColumn: tipo_amostra
+
+		annotation SummarizationSetBy = Automatic
+
+	column categoria
+		dataType: string
+		lineageTag: a933f4ed-e929-4657-8014-e746eb9cb0f8
+		summarizeBy: none
+		sourceColumn: categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column condicao_transporte
+		dataType: string
+		lineageTag: 749a263c-8512-495d-9e33-42e0478869ee
+		summarizeBy: none
+		sourceColumn: condicao_transporte
+
+		annotation SummarizationSetBy = Automatic
+
+	column tempo_max_transporte_h
+		dataType: int64
+		formatString: 0
+		lineageTag: 5e7c98a5-db50-42fd-9d42-9ee98c25e87d
+		summarizeBy: sum
+		sourceColumn: tempo_max_transporte_h
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricao
+		dataType: string
+		lineageTag: b3b134a7-60a0-4585-b78f-3c267a4d6ddd
+		summarizeBy: none
+		sourceColumn: descricao
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_amostra = m
+		mode: import
+		queryGroup: Dim
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost:5432", "fastlab"),
+				    fast_dim_amostra = Fonte{[Schema="fast",Item="dim_amostra"]}[Data]
+				in
+				    fast_dim_amostra
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

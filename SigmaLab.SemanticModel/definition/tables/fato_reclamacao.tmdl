@@ -1,0 +1,134 @@
+table fato_reclamacao
+	lineageTag: db032385-fea8-4b21-b0a0-bfeb945c955c
+
+	column id_reclamacao
+		dataType: int64
+		formatString: 0
+		lineageTag: 267eac6b-81e1-482c-9989-e00d143c9802
+		summarizeBy: sum
+		sourceColumn: id_reclamacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_paciente
+		dataType: int64
+		formatString: 0
+		lineageTag: ede630c6-b02b-448f-a97f-6e16e661bb2b
+		summarizeBy: none
+		sourceColumn: id_paciente
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_categoria
+		dataType: int64
+		formatString: 0
+		lineageTag: e543fc42-0d6e-4a54-ae25-1f2a28363965
+		summarizeBy: none
+		sourceColumn: id_categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_canal
+		dataType: int64
+		formatString: 0
+		lineageTag: 164f458a-23c9-4266-bc76-98751a74e854
+		summarizeBy: none
+		sourceColumn: id_canal
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_canal_contato
+		dataType: int64
+		formatString: 0
+		lineageTag: 3dfc4608-35b1-40fb-bb17-3e99e24b1e44
+		summarizeBy: none
+		sourceColumn: id_canal_contato
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_atendente
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e2018a3-5ae5-43f4-b01a-6951f1eb87a3
+		summarizeBy: sum
+		sourceColumn: id_atendente
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_unidade
+		dataType: int64
+		formatString: 0
+		lineageTag: f345fb8f-ef3c-4b4e-9269-e2fe11ef1799
+		summarizeBy: none
+		sourceColumn: id_unidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_abertura
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 64ad6eaf-3671-450c-a2d1-45e694054f6f
+		summarizeBy: none
+		sourceColumn: data_abertura
+
+		variation Variation
+			isDefault
+			relationship: 31bd8011-ea17-4b67-b26d-915d0bae9f2b
+			defaultHierarchy: LocalDateTable_8d2ff7cc-054e-44a3-8caf-ad1250e61f74.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_fechamento
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 85db8c92-dcdf-4bc9-87d0-8a67bf4d87ec
+		summarizeBy: none
+		sourceColumn: data_fechamento
+
+		variation Variation
+			isDefault
+			relationship: 4cbc61c4-5c8a-4860-a371-7f21e274bbc1
+			defaultHierarchy: LocalDateTable_562e1011-a7aa-40fe-8eff-f8934d9cd363.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column tempo_resolucao_h
+		dataType: int64
+		formatString: 0
+		lineageTag: a555f722-2d94-4773-bf5b-f5be0fe50a99
+		summarizeBy: sum
+		sourceColumn: tempo_resolucao_h
+
+		annotation SummarizationSetBy = Automatic
+
+	column satisfacao_final
+		dataType: int64
+		formatString: 0
+		lineageTag: 96f477d0-6418-4acb-99ff-1cfb3a03f6b3
+		summarizeBy: sum
+		sourceColumn: satisfacao_final
+
+		annotation SummarizationSetBy = Automatic
+
+	column motivo
+		dataType: string
+		lineageTag: 0c3e4012-b39f-4ab0-ba80-eef0025b88d3
+		summarizeBy: none
+		sourceColumn: motivo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fato_reclamacao = m
+		mode: import
+		queryGroup: Fato
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost:5432", "fastlab"),
+				    fast_fato_reclamacao = Fonte{[Schema="fast",Item="fato_reclamacao"]}[Data]
+				in
+				    fast_fato_reclamacao
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

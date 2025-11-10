@@ -1,0 +1,83 @@
+table dim_paciente
+	lineageTag: 68798049-6064-4405-9291-93577cda86bb
+
+	column id_paciente
+		dataType: int64
+		formatString: 0
+		lineageTag: c04989a9-a0a7-4bac-a441-e9abe493c7bf
+		summarizeBy: none
+		sourceColumn: id_paciente
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome
+		dataType: string
+		lineageTag: e0cc6e0a-2296-47c5-ac4c-fd3c70efd6e5
+		summarizeBy: none
+		sourceColumn: nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column sexo
+		dataType: string
+		lineageTag: f40608be-4f68-4df0-bdca-26bc90008d6b
+		summarizeBy: none
+		sourceColumn: sexo
+
+		annotation SummarizationSetBy = Automatic
+
+	column idade
+		dataType: int64
+		formatString: 0
+		lineageTag: 217e6813-79c5-4d4b-bcad-1f97a91d6f87
+		summarizeBy: sum
+		sourceColumn: idade
+
+		annotation SummarizationSetBy = Automatic
+
+	column cidade
+		dataType: string
+		lineageTag: d14d0831-ab29-4801-9893-d52bd1483a41
+		summarizeBy: none
+		sourceColumn: cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado
+		dataType: string
+		lineageTag: b9e8b800-2577-4020-9ab0-fd181282f4d8
+		summarizeBy: none
+		sourceColumn: estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column telefone
+		dataType: string
+		lineageTag: 5d7ce9d0-00f3-40d8-8910-ba72339c9f8c
+		summarizeBy: none
+		sourceColumn: telefone
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		lineageTag: 090ac805-e503-4737-bf30-d0edb6c8c5ea
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_paciente = m
+		mode: import
+		queryGroup: Dim
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost:5432", "fastlab"),
+				    fast_dim_paciente = Fonte{[Schema="fast",Item="dim_paciente"]}[Data]
+				in
+				    fast_dim_paciente
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

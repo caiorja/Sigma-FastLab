@@ -1,0 +1,75 @@
+table dim_equipamento
+	lineageTag: 2584d19d-6da5-4120-b927-1ba3cd0d3840
+
+	column id_equipamento
+		dataType: int64
+		formatString: 0
+		lineageTag: 0d2e85e3-89fd-49b7-8bb4-fb5bc9149309
+		summarizeBy: sum
+		sourceColumn: id_equipamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_equipamento
+		dataType: string
+		lineageTag: df8b504d-4242-472b-ac3e-a956daff699d
+		summarizeBy: none
+		sourceColumn: nome_equipamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column fabricante
+		dataType: string
+		lineageTag: bf1fc8d2-6398-4a23-acda-eb931f491aa4
+		summarizeBy: none
+		sourceColumn: fabricante
+
+		annotation SummarizationSetBy = Automatic
+
+	column modelo
+		dataType: string
+		lineageTag: ef369129-1dd4-42ae-9175-5f14ec5e0781
+		summarizeBy: none
+		sourceColumn: modelo
+
+		annotation SummarizationSetBy = Automatic
+
+	column area_principal
+		dataType: string
+		lineageTag: 4ac7054e-0461-4d7b-af7c-96a855df7361
+		summarizeBy: none
+		sourceColumn: area_principal
+
+		annotation SummarizationSetBy = Automatic
+
+	column capacidade_dia
+		dataType: int64
+		formatString: 0
+		lineageTag: 8871e4a4-82a8-48cb-8979-7b2e5df39788
+		summarizeBy: sum
+		sourceColumn: capacidade_dia
+
+		annotation SummarizationSetBy = Automatic
+
+	column status_operacional
+		dataType: string
+		lineageTag: d505af96-638b-4e41-81da-f2c3a2326410
+		summarizeBy: none
+		sourceColumn: status_operacional
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_equipamento = m
+		mode: import
+		queryGroup: Dim
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost:5432", "fastlab"),
+				    fast_dim_equipamento = Fonte{[Schema="fast",Item="dim_equipamento"]}[Data]
+				in
+				    fast_dim_equipamento
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
