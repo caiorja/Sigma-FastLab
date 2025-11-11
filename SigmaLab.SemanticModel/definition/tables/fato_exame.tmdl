@@ -31,7 +31,8 @@ table fato_exame
 		annotation SummarizationSetBy = Automatic
 
 	column id_area
-		dataType: string
+		dataType: int64
+		formatString: 0
 		lineageTag: 5a739ad4-19d7-4b99-bbc8-1d74eb3c86b3
 		summarizeBy: none
 		sourceColumn: id_area

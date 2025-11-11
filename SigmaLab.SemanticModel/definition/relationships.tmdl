@@ -102,3 +102,7 @@ relationship c536a2dd-4eb5-2c26-d1f1-b82691cf431d
 	fromColumn: fato_reclamacao.data_fechamento
 	toColumn: dim_tempo.data
 
+relationship 7b0548fb-ad9e-5c78-5ca1-8116672f9ac8
+	fromColumn: fato_reclamacao.id_area
+	toColumn: dim_area_laboratorial.id_area
+

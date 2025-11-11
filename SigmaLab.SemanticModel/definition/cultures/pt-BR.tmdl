@@ -5021,6 +5021,16 @@ cultureInfo pt-BR
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Unidade": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -10226,7 +10236,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Reclamação",
-			          "ConceptualProperty": "Falha %"
+			          "ConceptualProperty": "Falhas %"
 			        }
 			      },
 			      "State": "Generated",
@@ -10258,6 +10268,16 @@ cultureInfo pt-BR
 			        },
 			        {
 			          "Falha": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Falhas": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",

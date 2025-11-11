@@ -108,6 +108,15 @@ table fato_reclamacao
 
 		annotation SummarizationSetBy = Automatic
 
+	column id_area
+		dataType: int64
+		formatString: 0
+		lineageTag: 38c3ebf3-0bcf-4c08-9dcc-bc8c36fc873e
+		summarizeBy: none
+		sourceColumn: id_area
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fato_reclamacao = m
 		mode: import
 		queryGroup: Fato
