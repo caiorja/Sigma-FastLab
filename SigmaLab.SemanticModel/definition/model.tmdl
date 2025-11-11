@@ -10,13 +10,17 @@ queryGroup Fato
 
 	annotation PBI_QueryGroupOrder = 0
 
-queryGroup Dim
+queryGroup Dims_Exame
 
 	annotation PBI_QueryGroupOrder = 1
 
+queryGroup Dims_Reclamação
+
+	annotation PBI_QueryGroupOrder = 2
+
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["fato_exame","dim_paciente","dim_tipo_exame","dim_area_laboratorial","dim_responsavel","dim_tempo","dim_equipamento","dim_amostra","dim_unidade"]
+annotation PBI_QueryOrder = ["fato_exame","dim_paciente","dim_tipo_exame","dim_area_laboratorial","dim_responsavel","dim_tempo","dim_equipamento","dim_amostra","dim_unidade","dim_canal_atendimento","fast dim_canal_contato","dim_categoria_reclamacao","dim_atendente","dim_coleta","fato_reclamacao","DPMO","Sigma","SLA","Reclamação","Tempo","Atrasos","Exame","NPS"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -33,6 +37,23 @@ ref table LocalDateTable_f91d526f-c06a-4c89-90c2-4a23afd801fb
 ref table dim_equipamento
 ref table dim_amostra
 ref table dim_unidade
+ref table dim_canal_atendimento
+ref table 'fast dim_canal_contato'
+ref table dim_categoria_reclamacao
+ref table dim_atendente
+ref table LocalDateTable_d22c886a-d8d2-4e11-b8c7-5e5314ee3c00
+ref table LocalDateTable_9777e142-387b-4309-b05a-2e383eecf3eb
+ref table dim_coleta
+ref table LocalDateTable_fb975638-cbb8-4b39-a4f6-8272d39c51ee
+ref table fato_reclamacao
+ref table DPMO
+ref table Sigma
+ref table SLA
+ref table Reclamação
+ref table Tempo
+ref table Atrasos
+ref table Exame
+ref table NPS
 
 ref cultureInfo pt-BR
 

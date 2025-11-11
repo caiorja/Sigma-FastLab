@@ -3,7 +3,7 @@ table fato_exame
 
 	column data_coleta
 		dataType: dateTime
-		formatString: Long Date
+		formatString: Short Date
 		lineageTag: 3d2b8a80-7994-481a-86e3-7f4f231eb0f4
 		summarizeBy: none
 		sourceColumn: data_coleta

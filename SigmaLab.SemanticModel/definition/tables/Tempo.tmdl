@@ -1,0 +1,36 @@
+table Tempo
+	lineageTag: f49fb545-217c-4403-8c82-c9ab1c64d2f4
+
+	measure 'Tempo Médio de Entrega' =
+			
+			AVERAGE(fato_exame[tempo_processamento_min])
+		lineageTag: 8fc9bc9b-8a85-4ef6-9712-cc3de7dcb3ca
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Tempo medio de entrega ano anterior' =
+			
+			CALCULATE(
+			            Tempo[Tempo Médio de Entrega], SAMEPERIODLASTYEAR(dim_tempo[data]))
+		formatString: #,0.00
+		lineageTag: 3e0b64be-5a2b-418e-bab7-2c798821f16a
+
+	measure 'Tempo médio de entrega variacao ano %' =
+			
+			DIVIDE(
+			        (Tempo[Tempo Médio de Entrega]-Tempo[Tempo medio de entrega ano anterior]),Tempo[Tempo medio de entrega ano anterior],0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: f794ab71-615e-419e-a524-d3b4743c4a6f
+
+	partition Tempo = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

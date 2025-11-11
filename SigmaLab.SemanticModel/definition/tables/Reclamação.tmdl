@@ -1,0 +1,66 @@
+table Reclamação
+	lineageTag: d8685c20-cb14-4536-9e5f-2a09d23444c2
+
+	measure 'Índice de Reclamações' =
+			
+			DIVIDE(
+			    COUNTROWS(fato_reclamacao),
+			    COUNTROWS(fato_exame),
+			    0
+			)*1000
+		formatString: #,0.00
+		lineageTag: 5067c023-b25f-4824-92a8-dacf570045cf
+
+	measure Reclamações = COUNTROWS(fato_reclamacao)
+		formatString: #,0
+		lineageTag: fd653381-34f9-41ad-8a8c-06ca3a787cd5
+
+	measure 'Índice de reclamacoes ano anterior' =
+			
+			CALCULATE([Índice de Reclamações], SAMEPERIODLASTYEAR(dim_tempo[data]))
+		formatString: #,0.00
+		lineageTag: 8829291d-f60b-4dff-911d-882d4ef1af78
+
+	measure 'Índice de reclamacao variacao ano %' = ```
+			
+			 DIVIDE(
+			        ([Índice de Reclamações]-[Índice de reclamacoes ano anterior]), [Índice de reclamacoes ano anterior],0)
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: ff988181-059a-4a7c-b3c1-5e9b5d901464
+
+	measure Texto = "A cada 1000 exames realizado"
+		lineageTag: b0687f86-27b1-402b-b661-f2ca4ab144cf
+
+	measure 'Índice de reclamacoes dinamico variacao' = ```
+			
+			VAR VOL = DIVIDE(
+			        ([Índice de Reclamações] - [Índice de reclamacoes ano anterior]), [Índice de reclamacoes ano anterior],0)
+			
+			VAR ICON = 
+			        SWITCH(
+			        TRUE(),
+			            [Índice de reclamacao variacao ano %] >0,"⮝ ",
+			            [Índice de reclamacao variacao ano %] <0,"⮟"
+			        )
+			        VAR 
+			            RESULT = 
+			                    IF(VOL = 0 , BLANK() , 
+			                    CONCATENATE(ICON,CONCATENATE("",FORMAT(VOL,"0.00%;-0.00%;0.00%")))&" vs ano anterior")
+			RETURN
+			RESULT
+			```
+		lineageTag: 4b6ee8e5-11d6-4306-9d80-13cf1664fad3
+
+	partition Reclamação = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

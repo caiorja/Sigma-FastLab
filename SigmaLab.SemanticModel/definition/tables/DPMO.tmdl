@@ -1,0 +1,63 @@
+table DPMO
+	lineageTag: d6778c94-4974-4689-b65f-c183c2972ebf
+
+	measure DPMO =
+			
+			VAR Defeitos =
+			    COUNTROWS(FILTER(fato_exame, fato_exame[atraso] = 1))
+			VAR TotalExames =
+			    COUNTROWS(fato_exame)
+			VAR Oportunidades = 4
+			RETURN
+			    DIVIDE(Defeitos, TotalExames * Oportunidades) * 1000000
+		lineageTag: 4541350c-7d22-47c6-88e7-876ef2ce053b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'DPMO ano anterior' =
+			
+			CALCULATE(DPMO[DPMO], SAMEPERIODLASTYEAR(dim_tempo[data]))
+		lineageTag: d5cae48c-bbec-4cec-9229-178ff3108239
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'DPMO variacao ano %' =
+			
+			DIVIDE(
+			        ([DPMO] - [DPMO ano anterior]),
+			        [DPMO ano anterior],0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: c8ee5fc1-b9e9-4906-a05a-00de3e7c9095
+
+	measure 'DPMO dinamico variacao' = ```
+			
+			VAR VOL = DIVIDE(
+			        ([DPMO]-[DPMO ano anterior]), [DPMO ano anterior],0)
+			
+			VAR ICON = 
+			        SWITCH(
+			        TRUE(),
+			            [DPMO variacao ano %] >0,"⮝ ",
+			            [DPMO variacao ano %] <0,"⮟"
+			        )
+			        VAR 
+			            RESULT = 
+			                    IF(VOL = 0 , BLANK() , 
+			                    CONCATENATE(ICON,CONCATENATE("",FORMAT(VOL,"0.00%;-0.00%;0.00%")))&" vs ano anterior")
+			RETURN
+			RESULT
+			```
+		lineageTag: 1d30eb86-9281-444a-a6d0-2c581b361f69
+
+	partition DPMO = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

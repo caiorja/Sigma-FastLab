@@ -30,7 +30,7 @@ table dim_paciente
 		dataType: int64
 		formatString: 0
 		lineageTag: 1f022ee9-0bd4-4ce3-88ea-a5adfabf17b7
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: idade
 
 		annotation SummarizationSetBy = Automatic
@@ -69,7 +69,7 @@ table dim_paciente
 
 	partition dim_paciente = m
 		mode: import
-		queryGroup: Dim
+		queryGroup: Dims_Exame
 		source =
 				let
 				    Fonte = PostgreSQL.Database("localhost:5432", "fastlab"),

@@ -1,10 +1,10 @@
-table dim_responsavel
-	lineageTag: 5eb5c065-2f6c-4740-9760-e0bce7188a38
+table dim_coleta
+	lineageTag: b3e05b30-5d01-41e9-bf17-bcd38a3d76fd
 
 	column id_funcionario
 		dataType: int64
 		formatString: 0
-		lineageTag: 08dbf1bd-1875-431a-ac90-c95566dba9ad
+		lineageTag: 477371b6-0369-499b-9afa-360d60cd35cd
 		summarizeBy: none
 		sourceColumn: id_funcionario
 
@@ -12,7 +12,7 @@ table dim_responsavel
 
 	column nome
 		dataType: string
-		lineageTag: 7c193676-5e62-43a9-a161-16da3530ae20
+		lineageTag: 705fc77d-9d5e-4658-82a1-9a3191515939
 		summarizeBy: none
 		sourceColumn: nome
 
@@ -20,7 +20,7 @@ table dim_responsavel
 
 	column cargo
 		dataType: string
-		lineageTag: b5254e3d-7132-4a53-b903-9d18763ae727
+		lineageTag: 393f5acb-21cc-4890-9047-f89ba9526e96
 		summarizeBy: none
 		sourceColumn: cargo
 
@@ -28,7 +28,7 @@ table dim_responsavel
 
 	column setor
 		dataType: string
-		lineageTag: 1789b854-16c2-4a1b-9760-73ced83f52c9
+		lineageTag: 31c78c5e-548e-477d-978e-4c3c68637e9c
 		summarizeBy: none
 		sourceColumn: setor
 
@@ -36,7 +36,7 @@ table dim_responsavel
 
 	column nivel_hierarquico
 		dataType: string
-		lineageTag: 05693d5b-647a-4fe6-9da3-065ef987ca91
+		lineageTag: b34607b8-9fa1-456b-afc8-0d3c9bc9b63a
 		summarizeBy: none
 		sourceColumn: nivel_hierarquico
 
@@ -44,7 +44,7 @@ table dim_responsavel
 
 	column chefe_imediato
 		dataType: string
-		lineageTag: 40deceee-7e17-4482-933a-d31b9f62b056
+		lineageTag: f76051b1-137b-4941-a373-8117992262f8
 		summarizeBy: none
 		sourceColumn: chefe_imediato
 
@@ -52,7 +52,7 @@ table dim_responsavel
 
 	column turno
 		dataType: string
-		lineageTag: b7af6bb8-d77e-44d2-aa1e-5ef6adf41b0d
+		lineageTag: a480f055-43bc-4fbb-bf72-54a3c77e1905
 		summarizeBy: none
 		sourceColumn: turno
 
@@ -61,38 +61,30 @@ table dim_responsavel
 	column data_admissao
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 9a4444d6-c172-4395-9466-6aa5f9d9e806
+		lineageTag: 54d172bc-6586-4ba9-92a9-ec5fbc0dd891
 		summarizeBy: none
 		sourceColumn: data_admissao
 
 		variation Variation
 			isDefault
-			relationship: c8ec6ae5-a7cf-4fa9-96d8-f60fe8bb35d0
-			defaultHierarchy: LocalDateTable_21f8ca49-d004-44ec-8fbe-db1a941fb3d8.'Hierarquia de datas'
+			relationship: efa023e3-ca96-4bcc-bd37-1a2fe1d6045e
+			defaultHierarchy: LocalDateTable_fb975638-cbb8-4b39-a4f6-8272d39c51ee.'Hierarquia de datas'
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
 
 	column data_desligamento
-		dataType: dateTime
-		formatString: Long Date
-		lineageTag: 57f052d4-4cff-415b-8cfa-32f54063c2a5
+		dataType: string
+		lineageTag: 5ae52978-4bd8-42cb-a974-67631bf51641
 		summarizeBy: none
 		sourceColumn: data_desligamento
 
-		variation Variation
-			isDefault
-			relationship: 6e8e2aaf-cd1a-46b7-97ae-bb77d32727a1
-			defaultHierarchy: LocalDateTable_2facc141-189c-4113-85f2-012ea7249f34.'Hierarquia de datas'
-
 		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
 
 	column status
 		dataType: string
-		lineageTag: b6b3cd92-1167-4668-bca2-8c9e7657dffd
+		lineageTag: 01ed0050-fc26-4bd0-800e-ac79dc928240
 		summarizeBy: none
 		sourceColumn: status
 
@@ -100,7 +92,7 @@ table dim_responsavel
 
 	column tempo_casa_anos
 		dataType: double
-		lineageTag: 0c0f026c-7615-4d8e-82dc-df06bb92cca2
+		lineageTag: 08fa892f-0592-4edf-833d-ca8d985d1966
 		summarizeBy: sum
 		sourceColumn: tempo_casa_anos
 
@@ -108,40 +100,43 @@ table dim_responsavel
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column registro_crbio
-		dataType: string
-		lineageTag: 5bccd56c-f790-41cd-81df-ccd8202432fa
-		summarizeBy: none
-		sourceColumn: registro_crbio
+	column media_coletas_dia
+		dataType: int64
+		formatString: 0
+		lineageTag: 2361cbb2-f9ed-42ef-a1c4-735b4631d505
+		summarizeBy: sum
+		sourceColumn: media_coletas_dia
 
 		annotation SummarizationSetBy = Automatic
 
-	column especialidade
-		dataType: string
-		lineageTag: 29ed36d6-bfa5-4c71-8951-10f3addac2c1
-		summarizeBy: none
-		sourceColumn: especialidade
+	column taxa_rejeicao_%
+		dataType: double
+		lineageTag: cc1b2148-38c6-4d49-896a-550e6c1592cb
+		summarizeBy: sum
+		sourceColumn: taxa_rejeicao_%
 
 		annotation SummarizationSetBy = Automatic
 
-	column ativo_lab
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ativo_coleta
 		dataType: boolean
 		formatString: """TRUE"";""TRUE"";""FALSE"""
-		lineageTag: fc0c7e68-cbc4-41ab-bc04-6e0ee46f5821
+		lineageTag: 493f2ca1-86c8-4eab-ba23-5ddcb1604cba
 		summarizeBy: none
-		sourceColumn: ativo_lab
+		sourceColumn: ativo_coleta
 
 		annotation SummarizationSetBy = Automatic
 
-	partition dim_responsavel = m
+	partition dim_coleta = m
 		mode: import
-		queryGroup: Dims_Exame
+		queryGroup: Dims_Reclamação
 		source =
 				let
 				    Fonte = PostgreSQL.Database("localhost:5432", "fastlab"),
-				    fast_dim_responsavel = Fonte{[Schema="fast",Item="dim_responsavel"]}[Data]
+				    fast_dim_coleta = Fonte{[Schema="fast",Item="dim_coleta"]}[Data]
 				in
-				    fast_dim_responsavel
+				    fast_dim_coleta
 
 	annotation PBI_NavigationStepName = Navegação
 

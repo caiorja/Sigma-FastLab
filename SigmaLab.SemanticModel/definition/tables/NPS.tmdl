@@ -1,0 +1,69 @@
+table NPS
+	lineageTag: b690a572-bc4f-4380-a539-37068730be8d
+
+	measure NPS = ```
+			
+			VAR Total = COUNTROWS(fato_reclamacao)
+			VAR Promotores = CALCULATE(COUNTROWS(fato_reclamacao), fato_reclamacao[satisfacao_final] >= 4)
+			VAR Detratores = CALCULATE(COUNTROWS(fato_reclamacao), fato_reclamacao[satisfacao_final] <= 2)
+			RETURN 
+			DIVIDE((Promotores - Detratores), Total, 0) * 100
+			
+			```
+		lineageTag: 5effd353-a396-4ba4-a092-bcbdc19efa5d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'NPS ano anterior' =
+			
+			CALCULATE([NPS], SAMEPERIODLASTYEAR(dim_tempo[data]))
+		lineageTag: 15d18ee3-d43e-4123-80d6-40dd6c9463c4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'NPS variacao ano %' =
+			
+			DIVIDE(([NPS] - [NPS ano anterior]), [NPS ano anterior], 0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: ffda89ac-f844-4e67-b7eb-138625c66a54
+
+	measure 'NPS Dinâmico Variação' =
+			
+			VAR VOL =
+			    DIVIDE(
+			        ([NPS] - [NPS ano anterior]),
+			        [NPS ano anterior],
+			        0
+			    )
+			
+			VAR ICON =
+			    SWITCH(
+			        TRUE(),
+			        VOL > 0, "⮝ ",
+			        VOL < 0, "⮟ ",
+			        ""
+			    )
+			
+			VAR RESULT =
+			    IF(
+			        VOL = 0,
+			        BLANK(),
+			        ICON & FORMAT(VOL, "0.00%;-0.00%;0.00%") & " vs ano anterior"
+			    )
+			
+			RETURN
+			RESULT
+		lineageTag: 44919343-ee63-479f-95e7-356602f9449f
+
+	partition NPS = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

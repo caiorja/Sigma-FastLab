@@ -50,3 +50,55 @@ relationship a38a126e-cb69-0e4b-0d20-06c3e24a091c
 	fromColumn: fato_exame.data_entrega
 	toColumn: dim_tempo.data
 
+relationship 0d66609f-5549-4867-bcc9-2e7a1864ae5f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_atendente.data_admissao
+	toColumn: LocalDateTable_d22c886a-d8d2-4e11-b8c7-5e5314ee3c00.Date
+
+relationship 198b8778-6895-4f0a-a3b6-a9dd0fd26fcd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_atendente.data_desligamento
+	toColumn: LocalDateTable_9777e142-387b-4309-b05a-2e383eecf3eb.Date
+
+relationship efa023e3-ca96-4bcc-bd37-1a2fe1d6045e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_coleta.data_admissao
+	toColumn: LocalDateTable_fb975638-cbb8-4b39-a4f6-8272d39c51ee.Date
+
+relationship AutoDetected_87b9e59b-f1bd-4390-9419-679e027a96a1
+	fromColumn: fato_reclamacao.id_paciente
+	toColumn: dim_paciente.id_paciente
+
+relationship AutoDetected_5ef9cc1e-20e1-4fec-bb3e-4b7682aeaf7a
+	fromColumn: fato_reclamacao.id_unidade
+	toColumn: dim_unidade.id_unidade
+
+relationship AutoDetected_86e70cf0-5ca1-402d-ae08-c918d5c53c71
+	fromColumn: fato_reclamacao.id_canal
+	toColumn: dim_canal_atendimento.id_canal
+
+relationship AutoDetected_f91cd56f-35e2-48fe-96f3-6b3941b69a7d
+	fromColumn: fato_reclamacao.id_canal_contato
+	toColumn: 'fast dim_canal_contato'.id_canal_contato
+
+relationship AutoDetected_849ddc45-0aa1-4855-85ab-d4d71e1c0fe4
+	fromColumn: fato_reclamacao.id_categoria
+	toColumn: dim_categoria_reclamacao.id_categoria
+
+relationship 50f391ab-4576-80a7-6388-df35bc2dc21b
+	fromColumn: fato_reclamacao.id_atendente
+	toColumn: dim_atendente.id_funcionario
+
+relationship 9e3f889b-8413-d044-92db-b642e24dede3
+	fromColumn: fato_reclamacao.id_atendente
+	toColumn: dim_coleta.id_funcionario
+
+relationship 4311e79f-1538-4562-db5b-a13719e8d949
+	fromColumn: fato_reclamacao.data_abertura
+	toColumn: dim_tempo.data
+
+relationship c536a2dd-4eb5-2c26-d1f1-b82691cf431d
+	isActive: false
+	fromColumn: fato_reclamacao.data_fechamento
+	toColumn: dim_tempo.data
+

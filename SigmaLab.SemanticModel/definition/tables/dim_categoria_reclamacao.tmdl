@@ -1,0 +1,50 @@
+table dim_categoria_reclamacao
+	lineageTag: 38172b13-488f-4ac8-a47e-8bc090eabe95
+
+	column id_categoria
+		dataType: int64
+		formatString: 0
+		lineageTag: 386c40ac-9b87-4251-8134-c0600c156252
+		summarizeBy: none
+		sourceColumn: id_categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_categoria
+		dataType: string
+		lineageTag: 3db3f7d6-0f50-46e2-a94c-0a38989f4685
+		summarizeBy: none
+		sourceColumn: nome_categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo
+		dataType: string
+		lineageTag: 95c5fedb-b34f-4720-866a-76d93431dfdb
+		summarizeBy: none
+		sourceColumn: tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricao
+		dataType: string
+		lineageTag: 84b82e70-c153-4c3b-ae19-ef19c60e8117
+		summarizeBy: none
+		sourceColumn: descricao
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_categoria_reclamacao = m
+		mode: import
+		queryGroup: Dims_Reclamação
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost:5432", "fastlab"),
+				    fast_dim_categoria_reclamacao = Fonte{[Schema="fast",Item="dim_categoria_reclamacao"]}[Data]
+				in
+				    fast_dim_categoria_reclamacao
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

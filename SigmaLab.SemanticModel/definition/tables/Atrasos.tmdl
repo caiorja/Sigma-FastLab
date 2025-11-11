@@ -1,0 +1,52 @@
+table Atrasos
+	lineageTag: 410634fe-183e-40e0-9640-691cfb5c7c9b
+
+	measure Atrasos = SUM(fato_exame[atraso])
+		formatString: #,0
+		lineageTag: da3ab60b-ee32-47e3-9de8-533cbf3fb1fd
+
+	measure 'Atrasos ano anterior' =
+			
+			CALCULATE(Atrasos[Atrasos], SAMEPERIODLASTYEAR(dim_tempo[data]))
+		formatString: #,0
+		lineageTag: e51cabef-da78-4781-9ac1-3e58f7f23cad
+
+	measure 'Atrasos variacao ano %' =
+			
+			DIVIDE(
+			        (Atrasos[Atrasos] - Atrasos[Atrasos ano anterior]),Atrasos[Atrasos ano anterior],0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 4aa9cceb-701d-432f-a004-9fd31ca091ca
+
+	measure 'Atrasos dinamico variacao' = ```
+			
+			VAR VOL = DIVIDE(
+			        ([Atrasos]-[Atrasos ano anterior]), [Atrasos ano anterior],0)
+			
+			VAR ICON = 
+			        SWITCH(
+			        TRUE(),
+			            [Atrasos variacao ano %] >0,"⮝ ",
+			            [Atrasos variacao ano %] <0,"⮟"
+			        )
+			        VAR 
+			            RESULT = 
+			                    IF(VOL = 0 , BLANK() , 
+			                    CONCATENATE(ICON,CONCATENATE("",FORMAT(VOL,"0.00%;-0.00%;0.00%")))&" vs ano anterior")
+			RETURN
+			RESULT
+			```
+		lineageTag: 2cdda159-fbd6-40db-a42e-a96a4fcca96a
+
+	partition Atrasos = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

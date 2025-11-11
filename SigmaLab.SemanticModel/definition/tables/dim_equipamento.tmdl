@@ -61,7 +61,7 @@ table dim_equipamento
 
 	partition dim_equipamento = m
 		mode: import
-		queryGroup: Dim
+		queryGroup: Dims_Exame
 		source =
 				let
 				    Fonte = PostgreSQL.Database("localhost:5432", "fastlab"),

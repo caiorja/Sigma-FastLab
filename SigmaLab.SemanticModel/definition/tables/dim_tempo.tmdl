@@ -12,7 +12,7 @@ table dim_tempo
 
 	column data
 		dataType: dateTime
-		formatString: Long Date
+		formatString: Short Date
 		lineageTag: 40f38047-2907-4b70-8370-36377634b3ad
 		summarizeBy: none
 		sourceColumn: data
@@ -121,9 +121,26 @@ table dim_tempo
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Ano Atual' =
+			
+			IF(dim_tempo[ano] = YEAR(TODAY()),"Ano Atual", FORMAT(dim_tempo[data],"YYYY"))
+		lineageTag: 2166035f-2587-4cd4-aabc-e034d2dc8da7
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes_abrv = FORMAT([data],"MMM")
+		lineageTag: 118c9c9f-d506-4420-bf7e-af5b0200e1c1
+		summarizeBy: none
+		sortByColumn: mes
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim_tempo = m
 		mode: import
-		queryGroup: Dim
+		queryGroup: Dims_Exame
 		source =
 				let
 				    Fonte = PostgreSQL.Database("localhost:5432", "fastlab"),

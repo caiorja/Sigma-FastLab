@@ -62,14 +62,14 @@ table dim_unidade
 		dataType: int64
 		formatString: 0
 		lineageTag: 49405ba4-377f-434f-87a3-37c379b9b31a
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: capacidade_diaria
 
 		annotation SummarizationSetBy = Automatic
 
 	partition dim_unidade = m
 		mode: import
-		queryGroup: Dim
+		queryGroup: Dims_Exame
 		source =
 				let
 				    Fonte = PostgreSQL.Database("localhost:5432", "fastlab"),

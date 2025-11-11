@@ -1,0 +1,69 @@
+table Sigma
+	lineageTag: c5eba149-6347-4ade-ab56-40f43dacc0e5
+
+	measure 'Nível Sigma' = ```
+			
+			VAR NSIGMA =
+			    IF(
+			        [DPMO] = 0,
+			        6,
+			        IF(
+			            [DPMO] >= 1000000,
+			            0,
+			            NORM.S.INV(1 - [DPMO] / 1000000) + 1.5
+			        )
+			    )
+			RETURN
+			IF([DPMO] = BLANK(), BLANK(), NSIGMA)
+			
+			```
+		lineageTag: 1695a179-edfd-4424-a29b-32d1e7ef9a91
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Nível Sigma ano anterior' =
+			
+			CALCULATE(Sigma[Nível Sigma], SAMEPERIODLASTYEAR(dim_tempo[data]))
+		formatString: #,0.00
+		lineageTag: c2766ac2-02e7-4da2-8c74-3361d6e343bb
+
+	measure 'Nível Sigma dinamico variacao' = ```
+			
+			VAR VOL = DIVIDE(
+			        ([Nível Sigma]-[Nível Sigma ano anterior]), [Nível Sigma ano anterior],0)
+			
+			VAR ICON = 
+			        SWITCH(
+			        TRUE(),
+			            [Nível Sigma variacao ano %] >0,"⮝ ",
+			            [Nível Sigma variacao ano %] <0,"⮟"
+			        )
+			        VAR 
+			            RESULT = 
+			                    IF(VOL = 0 , BLANK() , 
+			                    CONCATENATE(ICON,CONCATENATE("",FORMAT(VOL,"0.00%;-0.00%;0.00%")))&" vs ano anterior")
+			RETURN
+			RESULT
+			```
+		lineageTag: d297255e-2493-4ba3-857d-ce623fa577bb
+
+	measure 'Nível Sigma variacao ano %' =
+			
+			DIVIDE(
+			        ([Nível Sigma] - [Nível Sigma ano anterior]),
+			        [Nível Sigma ano anterior],0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 79c136bb-6567-49d0-b832-042d68c8da1d
+
+	partition Sigma = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

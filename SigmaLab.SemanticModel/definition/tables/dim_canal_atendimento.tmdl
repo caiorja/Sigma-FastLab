@@ -1,0 +1,42 @@
+table dim_canal_atendimento
+	lineageTag: 40984181-0b57-4547-a366-88fb23f1bc65
+
+	column id_canal
+		dataType: int64
+		formatString: 0
+		lineageTag: fe1bd7af-03ec-4195-b90a-8895e5295329
+		summarizeBy: none
+		sourceColumn: id_canal
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_canal
+		dataType: string
+		lineageTag: 507c0c74-4c48-47f7-b75d-336939103d04
+		summarizeBy: none
+		sourceColumn: nome_canal
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricao
+		dataType: string
+		lineageTag: f0246573-6062-436a-a5f0-e6f951ff9011
+		summarizeBy: none
+		sourceColumn: descricao
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_canal_atendimento = m
+		mode: import
+		queryGroup: Dims_Reclamação
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost:5432", "fastlab"),
+				    fast_dim_canal_atendimento = Fonte{[Schema="fast",Item="dim_canal_atendimento"]}[Data]
+				in
+				    fast_dim_canal_atendimento
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
