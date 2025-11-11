@@ -9818,6 +9818,16 @@ cultureInfo pt-BR
 			          "índice de reclamações": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Índice Reclamações": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -10169,6 +10179,294 @@ cultureInfo pt-BR
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "sigma.cor_destaque": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sigma",
+			          "ConceptualProperty": "Cor_Destaque"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cor destaque": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Cor_Destaque": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "sigma.nível_sigma_descrição": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sigma",
+			          "ConceptualProperty": "Nível Sigma Descrição"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nível sigma descrição": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "reclamação.falha_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Reclamação",
+			          "ConceptualProperty": "Falha %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "falha %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "falha percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "falha pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Falha": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "exame": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Exame"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "exame": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "exame.exame": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Exame",
+			          "ConceptualProperty": "Exame"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "exame": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Exames Realizados": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "np": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "NPS"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "np": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "np.np": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "NPS",
+			          "ConceptualProperty": "NPS"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "np": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "np.NPS_ano_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "NPS",
+			          "ConceptualProperty": "NPS ano anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "NPS ano anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "np.NPS_variacao_ano_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "NPS",
+			          "ConceptualProperty": "NPS variacao ano %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "NPS variacao ano %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "np variacao ano percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "np variacao ano pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "np.NPS_dinâmico_variação": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "NPS",
+			          "ConceptualProperty": "NPS Dinâmico Variação"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "NPS dinâmico variação": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "resumo_nível_sigma": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Resumo Nível Sigma"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "resumo nível sigma": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "resumo_nível_sigma.nível_sigma": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Resumo Nível Sigma",
+			          "ConceptualProperty": "Nível Sigma"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nível sigma": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "resumo_nível_sigma.dpmo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Resumo Nível Sigma",
+			          "ConceptualProperty": "DPMO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dpmo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "resumo_nível_sigma.descrição": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Resumo Nível Sigma",
+			          "ConceptualProperty": "Descrição"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "descrição": {
+			            "State": "Generated"
 			          }
 			        }
 			      ]
@@ -13086,6 +13384,435 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_pacientes_have_fato_exames"
+			        }
+			      ]
+			    },
+			    "resumo_nível_sigma_has_descrição": {
+			      "Binding": {
+			        "ConceptualEntity": "Resumo Nível Sigma"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "resumo_nível_sigma": {
+			          "Target": {
+			            "Entity": "resumo_nível_sigma"
+			          }
+			        },
+			        "resumo_nível_sigma.descrição": {
+			          "Target": {
+			            "Entity": "resumo_nível_sigma.descrição"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "resumo_nível_sigma"
+			            },
+			            "Object": {
+			              "Role": "resumo_nível_sigma.descrição"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "resumo_nível_sigmas_have_descriçãos"
+			        }
+			      ]
+			    },
+			    "resumo_nível_sigma_has_dpmo": {
+			      "Binding": {
+			        "ConceptualEntity": "Resumo Nível Sigma"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "resumo_nível_sigma": {
+			          "Target": {
+			            "Entity": "resumo_nível_sigma"
+			          }
+			        },
+			        "resumo_nível_sigma.dpmo": {
+			          "Target": {
+			            "Entity": "resumo_nível_sigma.dpmo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "resumo_nível_sigma"
+			            },
+			            "Object": {
+			              "Role": "resumo_nível_sigma.dpmo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "resumo_nível_sigmas_have_dpmos"
+			        }
+			      ]
+			    },
+			    "resumo_nível_sigma_has_nível_sigma": {
+			      "Binding": {
+			        "ConceptualEntity": "Resumo Nível Sigma"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "resumo_nível_sigma": {
+			          "Target": {
+			            "Entity": "resumo_nível_sigma"
+			          }
+			        },
+			        "resumo_nível_sigma.nível_sigma": {
+			          "Target": {
+			            "Entity": "resumo_nível_sigma.nível_sigma"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "resumo_nível_sigma"
+			            },
+			            "Object": {
+			              "Role": "resumo_nível_sigma.nível_sigma"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "resumo_nível_sigmas_have_nível_sigmas"
+			        }
+			      ]
+			    },
+			    "fato_reclamacao_has_np_NPS_dinâmico_variação": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_reclamacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_reclamacao": {
+			          "Target": {
+			            "Entity": "fato_reclamacao"
+			          }
+			        },
+			        "np.NPS_dinâmico_variação": {
+			          "Target": {
+			            "Entity": "np.NPS_dinâmico_variação"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_reclamacao"
+			            },
+			            "Object": {
+			              "Role": "np.NPS_dinâmico_variação"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_reclamacaos_have_NPS_dinâmico_variação"
+			        }
+			      ]
+			    },
+			    "fato_reclamacao_has_np_NPS_variacao_ano_": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_reclamacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_reclamacao": {
+			          "Target": {
+			            "Entity": "fato_reclamacao"
+			          }
+			        },
+			        "np.NPS_variacao_ano_": {
+			          "Target": {
+			            "Entity": "np.NPS_variacao_ano_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_reclamacao"
+			            },
+			            "Object": {
+			              "Role": "np.NPS_variacao_ano_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_reclamacaos_have_NPS_variacao_ano_"
+			        }
+			      ]
+			    },
+			    "fato_reclamacao_has_np_NPS_ano_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_reclamacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_reclamacao": {
+			          "Target": {
+			            "Entity": "fato_reclamacao"
+			          }
+			        },
+			        "np.NPS_ano_anterior": {
+			          "Target": {
+			            "Entity": "np.NPS_ano_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_reclamacao"
+			            },
+			            "Object": {
+			              "Role": "np.NPS_ano_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_reclamacaos_have_NPS_ano_anterior"
+			        }
+			      ]
+			    },
+			    "fato_reclamacao_has_np_np": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_reclamacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_reclamacao": {
+			          "Target": {
+			            "Entity": "fato_reclamacao"
+			          }
+			        },
+			        "np.np": {
+			          "Target": {
+			            "Entity": "np.np"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_reclamacao"
+			            },
+			            "Object": {
+			              "Role": "np.np"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_reclamacaos_have_np"
+			        }
+			      ]
+			    },
+			    "fato_exame_has_exame_exame": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exame"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exame": {
+			          "Target": {
+			            "Entity": "fato_exame"
+			          }
+			        },
+			        "exame.exame": {
+			          "Target": {
+			            "Entity": "exame.exame"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exame"
+			            },
+			            "Object": {
+			              "Role": "exame.exame"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exames_have_exame"
+			        }
+			      ]
+			    },
+			    "fato_exame_has_reclamação_falha_": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exame"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exame": {
+			          "Target": {
+			            "Entity": "fato_exame"
+			          }
+			        },
+			        "reclamação.falha_": {
+			          "Target": {
+			            "Entity": "reclamação.falha_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exame"
+			            },
+			            "Object": {
+			              "Role": "reclamação.falha_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exames_have_falha_"
+			        }
+			      ]
+			    },
+			    "fato_exame_has_sigma_nível_sigma_descrição": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exame"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exame": {
+			          "Target": {
+			            "Entity": "fato_exame"
+			          }
+			        },
+			        "sigma.nível_sigma_descrição": {
+			          "Target": {
+			            "Entity": "sigma.nível_sigma_descrição"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exame"
+			            },
+			            "Object": {
+			              "Role": "sigma.nível_sigma_descrição"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exames_have_nível_sigma_descrição"
+			        }
+			      ]
+			    },
+			    "fato_exame_has_sigma_cor_destaque": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exame"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exame": {
+			          "Target": {
+			            "Entity": "fato_exame"
+			          }
+			        },
+			        "sigma.cor_destaque": {
+			          "Target": {
+			            "Entity": "sigma.cor_destaque"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exame"
+			            },
+			            "Object": {
+			              "Role": "sigma.cor_destaque"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exames_have_cor_destaque"
+			        }
+			      ]
+			    },
+			    "sigma_has_cor_destaque": {
+			      "Binding": {
+			        "ConceptualEntity": "Sigma"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sigma": {
+			          "Target": {
+			            "Entity": "sigma"
+			          }
+			        },
+			        "sigma.cor_destaque": {
+			          "Target": {
+			            "Entity": "sigma.cor_destaque"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sigma"
+			            },
+			            "Object": {
+			              "Role": "sigma.cor_destaque"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sigmas_have_cor_destaque"
+			        }
+			      ]
+			    },
+			    "resumo_nível_sigma_has_sigma_cor_destaque": {
+			      "Binding": {
+			        "ConceptualEntity": "Resumo Nível Sigma"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "resumo_nível_sigma": {
+			          "Target": {
+			            "Entity": "resumo_nível_sigma"
+			          }
+			        },
+			        "sigma.cor_destaque": {
+			          "Target": {
+			            "Entity": "sigma.cor_destaque"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "resumo_nível_sigma"
+			            },
+			            "Object": {
+			              "Role": "sigma.cor_destaque"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "resumo_nível_sigmas_have_cor_destaque"
 			        }
 			      ]
 			    },

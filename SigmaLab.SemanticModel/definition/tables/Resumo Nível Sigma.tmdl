@@ -1,0 +1,39 @@
+table 'Resumo Nível Sigma'
+	lineageTag: 54a52a7b-cabb-4a49-ac94-aa058b07c9bb
+
+	column 'Nível Sigma'
+		dataType: string
+		lineageTag: 348ba5b8-0614-443e-80e6-60d8493fd0fb
+		summarizeBy: none
+		sourceColumn: Nível Sigma
+
+		annotation SummarizationSetBy = Automatic
+
+	column DPMO
+		dataType: double
+		formatString: #,0.0
+		lineageTag: 5a228b2e-7877-492f-afc4-abc0b20edd34
+		summarizeBy: sum
+		sourceColumn: DPMO
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descrição
+		dataType: string
+		lineageTag: 36208fb6-5c1f-453f-9dfd-0bac1a2ad8bd
+		summarizeBy: none
+		sourceColumn: Descrição
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Resumo Nível Sigma' = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("Vc5BCoMwEIXhq4SsQxgzmtpjlC6Di1GnJRBrKbF4nZ7FixksGLKbxcf/xjlZibt/TiSVtFfQAJCu20LBjzSymBYfZ9GTX0l2yklzaoRWN3gpdHaYq1a3UDIa2Mft9+Vw2Dpbbapyv5//veY0BrEQvA4c+BX5cDb/p+rCvfnzSLMp1+0=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Nível Sigma" = _t, DPMO = _t, Descrição = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Nível Sigma", type text}, {"DPMO", type number}, {"Descrição", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+

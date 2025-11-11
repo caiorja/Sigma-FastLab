@@ -20,7 +20,7 @@ queryGroup Dims_Reclamação
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["fato_exame","dim_paciente","dim_tipo_exame","dim_area_laboratorial","dim_responsavel","dim_tempo","dim_equipamento","dim_amostra","dim_unidade","dim_canal_atendimento","fast dim_canal_contato","dim_categoria_reclamacao","dim_atendente","dim_coleta","fato_reclamacao","DPMO","Sigma","SLA","Reclamação","Tempo","Atrasos","Exame","NPS"]
+annotation PBI_QueryOrder = ["fato_exame","dim_paciente","dim_tipo_exame","dim_area_laboratorial","dim_responsavel","dim_tempo","dim_equipamento","dim_amostra","dim_unidade","dim_canal_atendimento","fast dim_canal_contato","dim_categoria_reclamacao","dim_atendente","dim_coleta","fato_reclamacao","DPMO","Sigma","SLA","Reclamação","Tempo","Atrasos","Exame","NPS","Resumo Nível Sigma"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -54,6 +54,7 @@ ref table Tempo
 ref table Atrasos
 ref table Exame
 ref table NPS
+ref table 'Resumo Nível Sigma'
 
 ref cultureInfo pt-BR
 

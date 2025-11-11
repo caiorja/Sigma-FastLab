@@ -55,6 +55,50 @@ table Sigma
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 79c136bb-6567-49d0-b832-042d68c8da1d
 
+	measure Cor_Destaque = ```
+			
+			        VAR Nivel_Atual = MAX('Resumo Nível Sigma'[Nível Sigma]) // Pega o nível de Sigma da linha atual
+			        VAR Sigma = [Nível Sigma] // Traz o valor do Sigma 
+			        VAR Cor = 
+			                SWITCH(
+			                        TRUE(),
+			                        Sigma >= 6, "#70A4EC",   // Cor para 6 Sigma (azul claro)
+			                        Sigma >= 5, "#90A4EC",   // Cor para 5 Sigma (azul mais claro)
+			                        Sigma >= 4, "#A1C4F2",   // Cor para 4 Sigma (azul claro, bom)
+			                        Sigma >= 3, "#EFEFDC",   // Cor para 3 Sigma (amarelo puxado para laranja)
+			                        Sigma >= 2, "#F78B8B",   // Cor para 2 Sigma (vermelho claro)
+			                        Sigma >= 1, "#D93D3D",   // Cor para 1 Sigma (vermelho mais forte)
+			                        BLANK()) // Para garantir que qualquer valor não mapeado seja em branco
+			        VAR Result =  
+			            IF(
+			                Nivel_Atual = [Nível Sigma Descrição], // Verifica se o nível do sigma 
+			                Cor,                                  
+			                BLANK()                                   
+			            )
+			RETURN
+			Result
+			```
+		lineageTag: eea614f6-2b2e-4584-93ac-8e4b10111ea9
+
+	measure 'Nível Sigma Descrição' = ```
+			
+			    VAR Meu_DPMO = [DPMO]
+			    VAR Result = 
+			        SWITCH(
+			            TRUE(),
+			            Meu_DPMO < 34, "6 Sigma",       
+			            Meu_DPMO < 233, "5 Sigma",
+			            Meu_DPMO < 6210, "4 Sigma",
+			            Meu_DPMO < 66800, "3 Sigma",
+			            Meu_DPMO < 308537, "2 Sigma",
+			            Meu_DPMO <= 691462, "1 Sigma",  
+			            "Fora do Escopo"                 
+			        )
+			    RETURN
+			        Result
+			```
+		lineageTag: 6ff5fd28-e342-4858-899f-5155e5a8ecc1
+
 	partition Sigma = m
 		mode: import
 		source =

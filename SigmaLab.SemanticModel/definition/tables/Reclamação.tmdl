@@ -52,6 +52,13 @@ table Reclamação
 			```
 		lineageTag: 4b6ee8e5-11d6-4306-9d80-13cf1664fad3
 
+	measure 'Falha %' =
+			
+			DIVIDE(
+			        [Atrasos],[Exame],0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: b85a6f2c-fdcf-4503-8195-dde8ed51260b
+
 	partition Reclamação = m
 		mode: import
 		source =
