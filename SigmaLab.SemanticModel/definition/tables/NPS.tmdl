@@ -7,12 +7,11 @@ table NPS
 			VAR Promotores = CALCULATE(COUNTROWS(fato_reclamacao), fato_reclamacao[satisfacao_final] >= 4)
 			VAR Detratores = CALCULATE(COUNTROWS(fato_reclamacao), fato_reclamacao[satisfacao_final] <= 2)
 			RETURN 
-			DIVIDE((Promotores - Detratores), Total, 0) * 100
+			DIVIDE((Promotores - Detratores), Total, 0)
 			
 			```
+		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 5effd353-a396-4ba4-a092-bcbdc19efa5d
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'NPS ano anterior' =
 			

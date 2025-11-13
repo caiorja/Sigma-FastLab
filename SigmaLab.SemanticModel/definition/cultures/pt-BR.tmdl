@@ -1153,6 +1153,16 @@ cultureInfo pt-BR
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Exame Tipo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -1675,6 +1685,16 @@ cultureInfo pt-BR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Área": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -4410,6 +4430,16 @@ cultureInfo pt-BR
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Equipamento": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -5023,7 +5053,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Unidade": {
+			          "UNIDADE": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5427,6 +5457,26 @@ cultureInfo pt-BR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "Canal de atendimento": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Canal Atendimento": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -9889,22 +9939,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "reclamação.texto": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Reclamação",
-			          "ConceptualProperty": "Texto"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "texto": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "reclamação.índice_de_reclamacoes_dinamico_variacao": {
 			      "Definition": {
 			        "Binding": {
@@ -9917,6 +9951,16 @@ cultureInfo pt-BR
 			        {
 			          "índice de reclamacoes dinamico variacao": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "LY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -10190,6 +10234,16 @@ cultureInfo pt-BR
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Mês": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -10232,7 +10286,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "reclamação.falha_": {
+			    "reclamação.falhas_": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Reclamação",
@@ -10242,7 +10296,7 @@ cultureInfo pt-BR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "falha %": {
+			          "falhas %": {
 			            "State": "Generated"
 			          }
 			        },
@@ -10319,6 +10373,36 @@ cultureInfo pt-BR
 			        },
 			        {
 			          "Exames Realizados": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Total Exames": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Exames": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Total de Exames": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -10490,504 +10574,261 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "fato_reclamacao.id_area": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_reclamacao",
+			          "ConceptualProperty": "id_area"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "id area": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_area": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "id region": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "id locale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "id locality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "id neighbourhood": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "id district": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "id continent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "id field": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "id neighborhood": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "id section": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "id space": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "reclamação.falhas__ano_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Reclamação",
+			          "ConceptualProperty": "Falhas (%) Ano Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "falhas (%) ano anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "reclamação.falhas__variação_ano_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Reclamação",
+			          "ConceptualProperty": "Falhas (%) Variação Ano %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "falhas (%) variação ano %": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "reclamação.falhas__dinâmico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Reclamação",
+			          "ConceptualProperty": "Falhas (%) Dinâmico"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "falhas (%) dinâmico": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "reclamação.correlação__falhas__reclamações": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Reclamação",
+			          "ConceptualProperty": "Correlação % Falhas × Reclamações"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "correlação % falhas × reclamações": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "correlação percentage falha × reclamaçõe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "correlação pct falha × reclamaçõe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tempo.ano_passado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tempo",
+			          "ConceptualProperty": "Ano Passado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano passado": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "reclamação.texto_índice_de_reclamação": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Reclamação",
+			          "ConceptualProperty": "Texto índice de reclamação"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "texto índice de reclamação": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "*": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "dim_coleta_data_admissao_mê_has_dim_coleta_data_admissao_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_coleta"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_coleta.data_admissao.mê": {
-			          "Target": {
-			            "Entity": "dim_coleta.data_admissao.mê"
-			          }
-			        },
-			        "dim_coleta.data_admissao.dia": {
-			          "Target": {
-			            "Entity": "dim_coleta.data_admissao.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_coleta.data_admissao.mê"
-			            },
-			            "Object": {
-			              "Role": "dim_coleta.data_admissao.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_dias"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_coleta.data_admissao.dia"
-			            },
-			            "Object": {
-			              "Role": "dim_coleta.data_admissao.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_have_mê"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "dim_coleta.data_admissao.dia"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "dim_coleta.data_admissao.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_are_in_mê5"
-			        }
-			      ]
-			    },
-			    "dim_coleta_data_admissao_trimestre_has_dim_coleta_data_admissao_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_coleta"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_coleta.data_admissao.trimestre": {
-			          "Target": {
-			            "Entity": "dim_coleta.data_admissao.trimestre"
-			          }
-			        },
-			        "dim_coleta.data_admissao.mê": {
-			          "Target": {
-			            "Entity": "dim_coleta.data_admissao.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_coleta.data_admissao.trimestre"
-			            },
-			            "Object": {
-			              "Role": "dim_coleta.data_admissao.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_coleta.data_admissao.mê"
-			            },
-			            "Object": {
-			              "Role": "dim_coleta.data_admissao.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "dim_coleta.data_admissao.mê"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "dim_coleta.data_admissao.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_are_in_trimestres5"
-			        }
-			      ]
-			    },
-			    "dim_coleta_data_admissao_ano_has_dim_coleta_data_admissao_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_coleta"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_coleta.data_admissao.ano": {
-			          "Target": {
-			            "Entity": "dim_coleta.data_admissao.ano"
-			          }
-			        },
-			        "dim_coleta.data_admissao.trimestre": {
-			          "Target": {
-			            "Entity": "dim_coleta.data_admissao.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_coleta.data_admissao.ano"
-			            },
-			            "Object": {
-			              "Role": "dim_coleta.data_admissao.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_coleta.data_admissao.trimestre"
-			            },
-			            "Object": {
-			              "Role": "dim_coleta.data_admissao.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "dim_coleta.data_admissao.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "dim_coleta.data_admissao.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_anos5"
-			        }
-			      ]
-			    },
-			    "dim_coleta_data_admissao_hierarquia_de_data_has_dim_coleta_data_admissao_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_coleta"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_coleta.data_admissao.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "dim_coleta.data_admissao.hierarquia_de_data"
-			          }
-			        },
-			        "dim_coleta.data_admissao.dia": {
-			          "Target": {
-			            "Entity": "dim_coleta.data_admissao.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_coleta.data_admissao.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "dim_coleta.data_admissao.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias"
-			        }
-			      ]
-			    },
-			    "dim_coleta_data_admissao_hierarquia_de_data_has_dim_coleta_data_admissao_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_coleta"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_coleta.data_admissao.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "dim_coleta.data_admissao.hierarquia_de_data"
-			          }
-			        },
-			        "dim_coleta.data_admissao.mê": {
-			          "Target": {
-			            "Entity": "dim_coleta.data_admissao.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_coleta.data_admissao.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "dim_coleta.data_admissao.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê"
-			        }
-			      ]
-			    },
-			    "dim_coleta_data_admissao_hierarquia_de_data_has_dim_coleta_data_admissao_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_coleta"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_coleta.data_admissao.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "dim_coleta.data_admissao.hierarquia_de_data"
-			          }
-			        },
-			        "dim_coleta.data_admissao.trimestre": {
-			          "Target": {
-			            "Entity": "dim_coleta.data_admissao.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_coleta.data_admissao.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "dim_coleta.data_admissao.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres"
-			        }
-			      ]
-			    },
-			    "dim_coleta_data_admissao_hierarquia_de_data_has_dim_coleta_data_admissao_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_coleta"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_coleta.data_admissao.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "dim_coleta.data_admissao.hierarquia_de_data"
-			          }
-			        },
-			        "dim_coleta.data_admissao.ano": {
-			          "Target": {
-			            "Entity": "dim_coleta.data_admissao.ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_coleta.data_admissao.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "dim_coleta.data_admissao.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos"
-			        }
-			      ]
-			    },
-			    "dim_coleta_data_admissao_has_hierarquia_de_data": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_coleta"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_coleta.data_admissao": {
-			          "Target": {
-			            "Entity": "dim_coleta.data_admissao"
-			          }
-			        },
-			        "dim_coleta.data_admissao.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "dim_coleta.data_admissao.hierarquia_de_data"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_coleta.data_admissao"
-			            },
-			            "Object": {
-			              "Role": "dim_coleta.data_admissao.hierarquia_de_data"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "data_admissaos_have_hierarquia_de_data"
-			        }
-			      ]
-			    },
-			    "dim_atendente_data_desligamento_mê_has_dim_atendente_data_desligamento_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_atendente"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_atendente.data_desligamento.mê": {
-			          "Target": {
-			            "Entity": "dim_atendente.data_desligamento.mê"
-			          }
-			        },
-			        "dim_atendente.data_desligamento.dia": {
-			          "Target": {
-			            "Entity": "dim_atendente.data_desligamento.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_atendente.data_desligamento.mê"
-			            },
-			            "Object": {
-			              "Role": "dim_atendente.data_desligamento.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_dias1"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_atendente.data_desligamento.dia"
-			            },
-			            "Object": {
-			              "Role": "dim_atendente.data_desligamento.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_have_mê1"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "dim_atendente.data_desligamento.dia"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "dim_atendente.data_desligamento.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_are_in_mê4"
-			        }
-			      ]
-			    },
-			    "dim_atendente_data_desligamento_trimestre_has_dim_atendente_data_desligamento_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_atendente"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_atendente.data_desligamento.trimestre": {
-			          "Target": {
-			            "Entity": "dim_atendente.data_desligamento.trimestre"
-			          }
-			        },
-			        "dim_atendente.data_desligamento.mê": {
-			          "Target": {
-			            "Entity": "dim_atendente.data_desligamento.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_atendente.data_desligamento.trimestre"
-			            },
-			            "Object": {
-			              "Role": "dim_atendente.data_desligamento.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê1"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_atendente.data_desligamento.mê"
-			            },
-			            "Object": {
-			              "Role": "dim_atendente.data_desligamento.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres1"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "dim_atendente.data_desligamento.mê"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "dim_atendente.data_desligamento.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_are_in_trimestres4"
-			        }
-			      ]
-			    },
 			    "dim_atendente_data_desligamento_ano_has_dim_atendente_data_desligamento_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_atendente"
@@ -11017,7 +10858,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres1"
+			          "ID": "anos_have_trimestres"
 			        },
 			        {
 			          "Attribute": {
@@ -11030,7 +10871,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos1"
+			          "ID": "trimestres_have_anos"
 			        },
 			        {
 			          "Preposition": {
@@ -11083,7 +10924,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias1"
+			          "ID": "hierarquia_de_data_have_dias"
 			        }
 			      ]
 			    },
@@ -11116,7 +10957,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê1"
+			          "ID": "hierarquia_de_data_have_mê"
 			        }
 			      ]
 			    },
@@ -11149,7 +10990,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres1"
+			          "ID": "hierarquia_de_data_have_trimestres"
 			        }
 			      ]
 			    },
@@ -11182,7 +11023,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos1"
+			          "ID": "hierarquia_de_data_have_anos"
 			        }
 			      ]
 			    },
@@ -11248,7 +11089,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias2"
+			          "ID": "mê_have_dias"
 			        },
 			        {
 			          "Attribute": {
@@ -11261,7 +11102,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê2"
+			          "ID": "dias_have_mê"
 			        },
 			        {
 			          "Preposition": {
@@ -11314,7 +11155,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê2"
+			          "ID": "trimestres_have_mê"
 			        },
 			        {
 			          "Attribute": {
@@ -11327,7 +11168,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres2"
+			          "ID": "mê_have_trimestres"
 			        },
 			        {
 			          "Preposition": {
@@ -11380,7 +11221,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres2"
+			          "ID": "anos_have_trimestres1"
 			        },
 			        {
 			          "Attribute": {
@@ -11393,7 +11234,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos2"
+			          "ID": "trimestres_have_anos1"
 			        },
 			        {
 			          "Preposition": {
@@ -11446,7 +11287,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias2"
+			          "ID": "hierarquia_de_data_have_dias1"
 			        }
 			      ]
 			    },
@@ -11479,7 +11320,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê2"
+			          "ID": "hierarquia_de_data_have_mê1"
 			        }
 			      ]
 			    },
@@ -11512,7 +11353,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres2"
+			          "ID": "hierarquia_de_data_have_trimestres1"
 			        }
 			      ]
 			    },
@@ -11545,7 +11386,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos2"
+			          "ID": "hierarquia_de_data_have_anos1"
 			        }
 			      ]
 			    },
@@ -11578,7 +11419,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "data_admissaos_have_hierarquia_de_data1"
+			          "ID": "data_admissaos_have_hierarquia_de_data"
 			        }
 			      ]
 			    },
@@ -11611,7 +11452,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias3"
+			          "ID": "mê_have_dias1"
 			        },
 			        {
 			          "Attribute": {
@@ -11624,7 +11465,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê3"
+			          "ID": "dias_have_mê1"
 			        },
 			        {
 			          "Preposition": {
@@ -11677,7 +11518,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê3"
+			          "ID": "trimestres_have_mê1"
 			        },
 			        {
 			          "Attribute": {
@@ -11690,7 +11531,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres3"
+			          "ID": "mê_have_trimestres1"
 			        },
 			        {
 			          "Preposition": {
@@ -11743,7 +11584,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres3"
+			          "ID": "anos_have_trimestres2"
 			        },
 			        {
 			          "Attribute": {
@@ -11756,7 +11597,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos3"
+			          "ID": "trimestres_have_anos2"
 			        },
 			        {
 			          "Preposition": {
@@ -11809,7 +11650,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias3"
+			          "ID": "hierarquia_de_data_have_dias2"
 			        }
 			      ]
 			    },
@@ -11842,7 +11683,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê3"
+			          "ID": "hierarquia_de_data_have_mê2"
 			        }
 			      ]
 			    },
@@ -11875,7 +11716,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres3"
+			          "ID": "hierarquia_de_data_have_trimestres2"
 			        }
 			      ]
 			    },
@@ -11908,7 +11749,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos3"
+			          "ID": "hierarquia_de_data_have_anos2"
 			        }
 			      ]
 			    },
@@ -11974,7 +11815,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias4"
+			          "ID": "mê_have_dias2"
 			        },
 			        {
 			          "Attribute": {
@@ -11987,7 +11828,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê4"
+			          "ID": "dias_have_mê2"
 			        },
 			        {
 			          "Preposition": {
@@ -12040,7 +11881,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê4"
+			          "ID": "trimestres_have_mê2"
 			        },
 			        {
 			          "Attribute": {
@@ -12053,7 +11894,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres4"
+			          "ID": "mê_have_trimestres2"
 			        },
 			        {
 			          "Preposition": {
@@ -12106,7 +11947,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres4"
+			          "ID": "anos_have_trimestres3"
 			        },
 			        {
 			          "Attribute": {
@@ -12119,7 +11960,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos4"
+			          "ID": "trimestres_have_anos3"
 			        },
 			        {
 			          "Preposition": {
@@ -12172,7 +12013,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias4"
+			          "ID": "hierarquia_de_data_have_dias3"
 			        }
 			      ]
 			    },
@@ -12205,7 +12046,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê4"
+			          "ID": "hierarquia_de_data_have_mê3"
 			        }
 			      ]
 			    },
@@ -12238,7 +12079,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres4"
+			          "ID": "hierarquia_de_data_have_trimestres3"
 			        }
 			      ]
 			    },
@@ -12271,7 +12112,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos4"
+			          "ID": "hierarquia_de_data_have_anos3"
 			        }
 			      ]
 			    },
@@ -12337,7 +12178,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias5"
+			          "ID": "mê_have_dias3"
 			        },
 			        {
 			          "Attribute": {
@@ -12350,7 +12191,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê5"
+			          "ID": "dias_have_mê3"
 			        },
 			        {
 			          "Preposition": {
@@ -12403,7 +12244,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê5"
+			          "ID": "trimestres_have_mê3"
 			        },
 			        {
 			          "Attribute": {
@@ -12416,7 +12257,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres5"
+			          "ID": "mê_have_trimestres3"
 			        },
 			        {
 			          "Preposition": {
@@ -12469,7 +12310,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres5"
+			          "ID": "anos_have_trimestres4"
 			        },
 			        {
 			          "Attribute": {
@@ -12482,7 +12323,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos5"
+			          "ID": "trimestres_have_anos4"
 			        },
 			        {
 			          "Preposition": {
@@ -12535,7 +12376,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias5"
+			          "ID": "hierarquia_de_data_have_dias4"
 			        }
 			      ]
 			    },
@@ -12568,7 +12409,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê5"
+			          "ID": "hierarquia_de_data_have_mê4"
 			        }
 			      ]
 			    },
@@ -12601,7 +12442,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres5"
+			          "ID": "hierarquia_de_data_have_trimestres4"
 			        }
 			      ]
 			    },
@@ -12634,7 +12475,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos5"
+			          "ID": "hierarquia_de_data_have_anos4"
 			        }
 			      ]
 			    },
@@ -12667,11 +12508,11 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "data_admissaos_have_hierarquia_de_data2"
+			          "ID": "data_admissaos_have_hierarquia_de_data1"
 			        }
 			      ]
 			    },
-			    "fato_reclamacao_has_dim_tempo": {
+			    "fato_reclamacao_has_fato_exame": {
 			      "Binding": {
 			        "ConceptualEntity": "fato_reclamacao"
 			      },
@@ -12682,9 +12523,9 @@ cultureInfo pt-BR
 			            "Entity": "fato_reclamacao"
 			          }
 			        },
-			        "dim_tempo": {
+			        "fato_exame": {
 			          "Target": {
-			            "Entity": "dim_tempo"
+			            "Entity": "fato_exame"
 			          }
 			        }
 			      },
@@ -12695,25 +12536,12 @@ cultureInfo pt-BR
 			              "Role": "fato_reclamacao"
 			            },
 			            "Object": {
-			              "Role": "dim_tempo"
+			              "Role": "fato_exame"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fato_reclamacaos_have_dim_tempi"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_tempo"
-			            },
-			            "Object": {
-			              "Role": "fato_reclamacao"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_tempi_have_fato_reclamacaos"
+			          "ID": "fato_reclamacaos_have_fato_exames"
 			        }
 			      ]
 			    },
@@ -12947,144 +12775,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "fato_reclamacao_has_dim_unidade": {
-			      "Binding": {
-			        "ConceptualEntity": "fato_reclamacao"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fato_reclamacao": {
-			          "Target": {
-			            "Entity": "fato_reclamacao"
-			          }
-			        },
-			        "dim_unidade": {
-			          "Target": {
-			            "Entity": "dim_unidade"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fato_reclamacao"
-			            },
-			            "Object": {
-			              "Role": "dim_unidade"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fato_reclamacaos_have_dim_unidades"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_unidade"
-			            },
-			            "Object": {
-			              "Role": "fato_reclamacao"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_unidades_have_fato_reclamacaos"
-			        }
-			      ]
-			    },
-			    "fato_reclamacao_has_dim_paciente": {
-			      "Binding": {
-			        "ConceptualEntity": "fato_reclamacao"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fato_reclamacao": {
-			          "Target": {
-			            "Entity": "fato_reclamacao"
-			          }
-			        },
-			        "dim_paciente": {
-			          "Target": {
-			            "Entity": "dim_paciente"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fato_reclamacao"
-			            },
-			            "Object": {
-			              "Role": "dim_paciente"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fato_reclamacaos_have_dim_pacientes"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_paciente"
-			            },
-			            "Object": {
-			              "Role": "fato_reclamacao"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_pacientes_have_fato_reclamacaos"
-			        }
-			      ]
-			    },
-			    "fato_exame_has_dim_tempo": {
-			      "Binding": {
-			        "ConceptualEntity": "fato_exame"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fato_exame": {
-			          "Target": {
-			            "Entity": "fato_exame"
-			          }
-			        },
-			        "dim_tempo": {
-			          "Target": {
-			            "Entity": "dim_tempo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fato_exame"
-			            },
-			            "Object": {
-			              "Role": "dim_tempo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fato_exames_have_dim_tempi"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_tempo"
-			            },
-			            "Object": {
-			              "Role": "fato_exame"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_tempi_have_fato_exames"
-			        }
-			      ]
-			    },
 			    "fato_exame_has_dim_responsavel": {
 			      "Binding": {
 			        "ConceptualEntity": "fato_exame"
@@ -13223,98 +12913,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "fato_exame_has_dim_unidade": {
-			      "Binding": {
-			        "ConceptualEntity": "fato_exame"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fato_exame": {
-			          "Target": {
-			            "Entity": "fato_exame"
-			          }
-			        },
-			        "dim_unidade": {
-			          "Target": {
-			            "Entity": "dim_unidade"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fato_exame"
-			            },
-			            "Object": {
-			              "Role": "dim_unidade"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fato_exames_have_dim_unidades"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_unidade"
-			            },
-			            "Object": {
-			              "Role": "fato_exame"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_unidades_have_fato_exames"
-			        }
-			      ]
-			    },
-			    "fato_exame_has_dim_area_laboratorial": {
-			      "Binding": {
-			        "ConceptualEntity": "fato_exame"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fato_exame": {
-			          "Target": {
-			            "Entity": "fato_exame"
-			          }
-			        },
-			        "dim_area_laboratorial": {
-			          "Target": {
-			            "Entity": "dim_area_laboratorial"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fato_exame"
-			            },
-			            "Object": {
-			              "Role": "dim_area_laboratorial"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fato_exames_have_dim_area_laboratorial"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_area_laboratorial"
-			            },
-			            "Object": {
-			              "Role": "fato_exame"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_area_laboratorial_have_fato_exames"
-			        }
-			      ]
-			    },
 			    "fato_exame_has_dim_tipo_exame": {
 			      "Binding": {
 			        "ConceptualEntity": "fato_exame"
@@ -13361,7 +12959,106 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "fato_exame_has_dim_paciente": {
+			    "reclamação_has_texto_índice_de_reclamação": {
+			      "Binding": {
+			        "ConceptualEntity": "Reclamação"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reclamação": {
+			          "Target": {
+			            "Entity": "reclamação"
+			          }
+			        },
+			        "reclamação.texto_índice_de_reclamação": {
+			          "Target": {
+			            "Entity": "reclamação.texto_índice_de_reclamação"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reclamação"
+			            },
+			            "Object": {
+			              "Role": "reclamação.texto_índice_de_reclamação"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reclamaçãos_have_texto_índice_de_reclamação"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_ano_passado": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "dim_tempo.ano_passado": {
+			          "Target": {
+			            "Entity": "dim_tempo.ano_passado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.ano_passado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_ano_passados"
+			        }
+			      ]
+			    },
+			    "fato_reclamacao_has_reclamação_correlação__falhas__reclamações": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_reclamacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_reclamacao": {
+			          "Target": {
+			            "Entity": "fato_reclamacao"
+			          }
+			        },
+			        "reclamação.correlação__falhas__reclamações": {
+			          "Target": {
+			            "Entity": "reclamação.correlação__falhas__reclamações"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_reclamacao"
+			            },
+			            "Object": {
+			              "Role": "reclamação.correlação__falhas__reclamações"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_reclamacaos_have_correlação__falhas__reclamações"
+			        }
+			      ]
+			    },
+			    "fato_exame_has_reclamação_correlação__falhas__reclamações": {
 			      "Binding": {
 			        "ConceptualEntity": "fato_exame"
 			      },
@@ -13372,9 +13069,9 @@ cultureInfo pt-BR
 			            "Entity": "fato_exame"
 			          }
 			        },
-			        "dim_paciente": {
+			        "reclamação.correlação__falhas__reclamações": {
 			          "Target": {
-			            "Entity": "dim_paciente"
+			            "Entity": "reclamação.correlação__falhas__reclamações"
 			          }
 			        }
 			      },
@@ -13385,25 +13082,144 @@ cultureInfo pt-BR
 			              "Role": "fato_exame"
 			            },
 			            "Object": {
-			              "Role": "dim_paciente"
+			              "Role": "reclamação.correlação__falhas__reclamações"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fato_exames_have_dim_pacientes"
+			          "ID": "fato_exames_have_correlação__falhas__reclamações"
+			        }
+			      ]
+			    },
+			    "dim_area_laboratorial_has_reclamação_correlação__falhas__reclamações": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_area_laboratorial"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_area_laboratorial": {
+			          "Target": {
+			            "Entity": "dim_area_laboratorial"
+			          }
 			        },
+			        "reclamação.correlação__falhas__reclamações": {
+			          "Target": {
+			            "Entity": "reclamação.correlação__falhas__reclamações"
+			          }
+			        }
+			      },
+			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dim_paciente"
+			              "Role": "dim_area_laboratorial"
 			            },
 			            "Object": {
-			              "Role": "fato_exame"
+			              "Role": "reclamação.correlação__falhas__reclamações"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_pacientes_have_fato_exames"
+			          "ID": "dim_area_laboratorial_have_correlação__falhas__reclamações"
+			        }
+			      ]
+			    },
+			    "fato_exame_has_reclamação_falhas__dinâmico": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exame"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exame": {
+			          "Target": {
+			            "Entity": "fato_exame"
+			          }
+			        },
+			        "reclamação.falhas__dinâmico": {
+			          "Target": {
+			            "Entity": "reclamação.falhas__dinâmico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exame"
+			            },
+			            "Object": {
+			              "Role": "reclamação.falhas__dinâmico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exames_have_falhas__dinâmico"
+			        }
+			      ]
+			    },
+			    "fato_exame_has_reclamação_falhas__variação_ano_": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exame"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exame": {
+			          "Target": {
+			            "Entity": "fato_exame"
+			          }
+			        },
+			        "reclamação.falhas__variação_ano_": {
+			          "Target": {
+			            "Entity": "reclamação.falhas__variação_ano_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exame"
+			            },
+			            "Object": {
+			              "Role": "reclamação.falhas__variação_ano_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exames_have_falhas__variação_ano_"
+			        }
+			      ]
+			    },
+			    "fato_exame_has_reclamação_falhas__ano_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_exame"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_exame": {
+			          "Target": {
+			            "Entity": "fato_exame"
+			          }
+			        },
+			        "reclamação.falhas__ano_anterior": {
+			          "Target": {
+			            "Entity": "reclamação.falhas__ano_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_exame"
+			            },
+			            "Object": {
+			              "Role": "reclamação.falhas__ano_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_exames_have_falhas__ano_anterior"
 			        }
 			      ]
 			    },
@@ -13671,7 +13487,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "fato_exame_has_reclamação_falha_": {
+			    "fato_exame_has_reclamação_falhas_": {
 			      "Binding": {
 			        "ConceptualEntity": "fato_exame"
 			      },
@@ -13682,9 +13498,9 @@ cultureInfo pt-BR
 			            "Entity": "fato_exame"
 			          }
 			        },
-			        "reclamação.falha_": {
+			        "reclamação.falhas_": {
 			          "Target": {
-			            "Entity": "reclamação.falha_"
+			            "Entity": "reclamação.falhas_"
 			          }
 			        }
 			      },
@@ -13695,12 +13511,12 @@ cultureInfo pt-BR
 			              "Role": "fato_exame"
 			            },
 			            "Object": {
-			              "Role": "reclamação.falha_"
+			              "Role": "reclamação.falhas_"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fato_exames_have_falha_"
+			          "ID": "fato_exames_have_falhas_"
 			        }
 			      ]
 			    },
@@ -14163,39 +13979,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fato_exames_have_índice_de_reclamacoes_dinamico_variacao"
-			        }
-			      ]
-			    },
-			    "reclamação_has_texto": {
-			      "Binding": {
-			        "ConceptualEntity": "Reclamação"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "reclamação": {
-			          "Target": {
-			            "Entity": "reclamação"
-			          }
-			        },
-			        "reclamação.texto": {
-			          "Target": {
-			            "Entity": "reclamação.texto"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "reclamação"
-			            },
-			            "Object": {
-			              "Role": "reclamação.texto"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "reclamaçãos_have_texto"
 			        }
 			      ]
 			    },
@@ -18654,51 +18437,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "fato_exame_in_dim_area_laboratorial": {
-			      "Binding": {
-			        "ConceptualEntity": "fato_exame"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fato_exame": {
-			          "Target": {
-			            "Entity": "fato_exame"
-			          }
-			        },
-			        "dim_area_laboratorial": {
-			          "Target": {
-			            "Entity": "dim_area_laboratorial"
-			          }
-			        }
-			      },
-			      "SemanticSlots": {
-			        "Where": {
-			          "Role": "dim_area_laboratorial"
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "fato_exame"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "dim_area_laboratorial"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fato_exames_are_in_dim_area_laboratorial"
-			        }
-			      ]
-			    },
 			    "dim_equipamento_in_area_principal": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_equipamento"
@@ -18831,6 +18569,501 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_tipo_exames_are_in_areas"
+			        }
+			      ]
+			    },
+			    "dim_atendente_data_desligamento_trimestre_has_dim_atendente_data_desligamento_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_atendente"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_atendente.data_desligamento.trimestre": {
+			          "Target": {
+			            "Entity": "dim_atendente.data_desligamento.trimestre"
+			          }
+			        },
+			        "dim_atendente.data_desligamento.mê": {
+			          "Target": {
+			            "Entity": "dim_atendente.data_desligamento.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_atendente.data_desligamento.trimestre"
+			            },
+			            "Object": {
+			              "Role": "dim_atendente.data_desligamento.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê4"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_atendente.data_desligamento.mê"
+			            },
+			            "Object": {
+			              "Role": "dim_atendente.data_desligamento.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres4"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_atendente.data_desligamento.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_atendente.data_desligamento.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres4"
+			        }
+			      ]
+			    },
+			    "dim_atendente_data_desligamento_mê_has_dim_atendente_data_desligamento_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_atendente"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_atendente.data_desligamento.mê": {
+			          "Target": {
+			            "Entity": "dim_atendente.data_desligamento.mê"
+			          }
+			        },
+			        "dim_atendente.data_desligamento.dia": {
+			          "Target": {
+			            "Entity": "dim_atendente.data_desligamento.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_atendente.data_desligamento.mê"
+			            },
+			            "Object": {
+			              "Role": "dim_atendente.data_desligamento.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias4"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_atendente.data_desligamento.dia"
+			            },
+			            "Object": {
+			              "Role": "dim_atendente.data_desligamento.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê4"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_atendente.data_desligamento.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_atendente.data_desligamento.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê4"
+			        }
+			      ]
+			    },
+			    "dim_coleta_data_admissao_has_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_coleta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_coleta.data_admissao": {
+			          "Target": {
+			            "Entity": "dim_coleta.data_admissao"
+			          }
+			        },
+			        "dim_coleta.data_admissao.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_coleta.data_admissao.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_coleta.data_admissao"
+			            },
+			            "Object": {
+			              "Role": "dim_coleta.data_admissao.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_admissaos_have_hierarquia_de_data2"
+			        }
+			      ]
+			    },
+			    "dim_coleta_data_admissao_hierarquia_de_data_has_dim_coleta_data_admissao_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_coleta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_coleta.data_admissao.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_coleta.data_admissao.hierarquia_de_data"
+			          }
+			        },
+			        "dim_coleta.data_admissao.ano": {
+			          "Target": {
+			            "Entity": "dim_coleta.data_admissao.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_coleta.data_admissao.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "dim_coleta.data_admissao.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos5"
+			        }
+			      ]
+			    },
+			    "dim_coleta_data_admissao_hierarquia_de_data_has_dim_coleta_data_admissao_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_coleta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_coleta.data_admissao.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_coleta.data_admissao.hierarquia_de_data"
+			          }
+			        },
+			        "dim_coleta.data_admissao.trimestre": {
+			          "Target": {
+			            "Entity": "dim_coleta.data_admissao.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_coleta.data_admissao.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "dim_coleta.data_admissao.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres5"
+			        }
+			      ]
+			    },
+			    "dim_coleta_data_admissao_hierarquia_de_data_has_dim_coleta_data_admissao_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_coleta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_coleta.data_admissao.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_coleta.data_admissao.hierarquia_de_data"
+			          }
+			        },
+			        "dim_coleta.data_admissao.mê": {
+			          "Target": {
+			            "Entity": "dim_coleta.data_admissao.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_coleta.data_admissao.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "dim_coleta.data_admissao.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê5"
+			        }
+			      ]
+			    },
+			    "dim_coleta_data_admissao_hierarquia_de_data_has_dim_coleta_data_admissao_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_coleta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_coleta.data_admissao.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_coleta.data_admissao.hierarquia_de_data"
+			          }
+			        },
+			        "dim_coleta.data_admissao.dia": {
+			          "Target": {
+			            "Entity": "dim_coleta.data_admissao.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_coleta.data_admissao.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "dim_coleta.data_admissao.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias5"
+			        }
+			      ]
+			    },
+			    "dim_coleta_data_admissao_ano_has_dim_coleta_data_admissao_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_coleta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_coleta.data_admissao.ano": {
+			          "Target": {
+			            "Entity": "dim_coleta.data_admissao.ano"
+			          }
+			        },
+			        "dim_coleta.data_admissao.trimestre": {
+			          "Target": {
+			            "Entity": "dim_coleta.data_admissao.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_coleta.data_admissao.ano"
+			            },
+			            "Object": {
+			              "Role": "dim_coleta.data_admissao.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres5"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_coleta.data_admissao.trimestre"
+			            },
+			            "Object": {
+			              "Role": "dim_coleta.data_admissao.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos5"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_coleta.data_admissao.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_coleta.data_admissao.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos5"
+			        }
+			      ]
+			    },
+			    "dim_coleta_data_admissao_trimestre_has_dim_coleta_data_admissao_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_coleta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_coleta.data_admissao.trimestre": {
+			          "Target": {
+			            "Entity": "dim_coleta.data_admissao.trimestre"
+			          }
+			        },
+			        "dim_coleta.data_admissao.mê": {
+			          "Target": {
+			            "Entity": "dim_coleta.data_admissao.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_coleta.data_admissao.trimestre"
+			            },
+			            "Object": {
+			              "Role": "dim_coleta.data_admissao.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê5"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_coleta.data_admissao.mê"
+			            },
+			            "Object": {
+			              "Role": "dim_coleta.data_admissao.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres5"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_coleta.data_admissao.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_coleta.data_admissao.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres5"
+			        }
+			      ]
+			    },
+			    "dim_coleta_data_admissao_mê_has_dim_coleta_data_admissao_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_coleta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_coleta.data_admissao.mê": {
+			          "Target": {
+			            "Entity": "dim_coleta.data_admissao.mê"
+			          }
+			        },
+			        "dim_coleta.data_admissao.dia": {
+			          "Target": {
+			            "Entity": "dim_coleta.data_admissao.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_coleta.data_admissao.mê"
+			            },
+			            "Object": {
+			              "Role": "dim_coleta.data_admissao.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias5"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_coleta.data_admissao.dia"
+			            },
+			            "Object": {
+			              "Role": "dim_coleta.data_admissao.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê5"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_coleta.data_admissao.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_coleta.data_admissao.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê5"
 			        }
 			      ]
 			    }

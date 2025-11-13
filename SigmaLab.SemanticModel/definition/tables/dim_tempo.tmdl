@@ -138,6 +138,18 @@ table dim_tempo
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Ano Passado' =
+			
+			SWITCH(
+			        TRUE(),
+			                dim_tempo[ano] < YEAR(TODAY()), "Passado",
+			                dim_tempo[ano] = YEAR(TODAY()), "Atual",
+			                dim_tempo[ano] > YEAR(TODAY()), "Futuro")
+		lineageTag: e710cdae-125f-4177-9a93-08325fc58f40
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim_tempo = m
 		mode: import
 		queryGroup: Dims_Exame

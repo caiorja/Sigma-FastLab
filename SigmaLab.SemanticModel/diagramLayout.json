@@ -5,13 +5,13 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 938.70967741935488
+        "y": 766.12903225806451
       },
       "nodes": [
         {
           "location": {
             "x": 363.86395553659474,
-            "y": 1304.9144698747371
+            "y": 1614.5013610860422
           },
           "nodeIndex": "fato_exame",
           "nodeLineageTag": "ed169c9e-b454-47a5-a8b9-2c519c0102c5",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 51.612903225806448,
-            "y": 1582.5279683001322
+            "y": 1892.1148595114373
           },
           "nodeIndex": "dim_amostra",
           "nodeLineageTag": "94fb261c-70bb-43ae-a89f-a0a36df9c8e1",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 35.483870967741922,
-            "y": 1030.730314341188
+            "y": 1340.3172055524931
           },
           "nodeIndex": "dim_area_laboratorial",
           "nodeLineageTag": "d039719f-74cb-4c09-9b75-024028bddd5f",
@@ -50,7 +50,7 @@
         {
           "location": {
             "x": 33.870967741935488,
-            "y": 1291.2347131681674
+            "y": 1600.8216043794725
           },
           "nodeIndex": "dim_equipamento",
           "nodeLineageTag": "74d4cf35-38ca-4543-81c0-cecc86d22351",
@@ -63,7 +63,7 @@
         {
           "location": {
             "x": 370.18181818181819,
-            "y": 961.083984375
+            "y": 1270.6708755863051
           },
           "nodeIndex": "dim_paciente",
           "nodeLineageTag": "752b4a9d-4ad8-4643-a7f6-adf0fe94fe0c",
@@ -76,7 +76,7 @@
         {
           "location": {
             "x": 689.95894428152485,
-            "y": 1307.756707303065
+            "y": 1617.3435985143701
           },
           "nodeIndex": "dim_responsavel",
           "nodeLineageTag": "5eb5c065-2f6c-4740-9760-e0bce7188a38",
@@ -89,7 +89,7 @@
         {
           "location": {
             "x": 693.90029325513194,
-            "y": 1673.2992169917247
+            "y": 1982.8861082030298
           },
           "nodeIndex": "dim_tempo",
           "nodeLineageTag": "607d1eac-af72-45ec-b6fc-6b1ced3c6d22",
@@ -102,7 +102,7 @@
         {
           "location": {
             "x": 671.74193548387086,
-            "y": 1032.8300210860561
+            "y": 1342.4169122973613
           },
           "nodeIndex": "dim_tipo_exame",
           "nodeLineageTag": "2f84fe30-0a9b-4e85-b55a-a9bc5e13b583",
@@ -115,7 +115,7 @@
         {
           "location": {
             "x": 355.59530791788859,
-            "y": 1717.5045078895751
+            "y": 2027.0913991008802
           },
           "nodeIndex": "dim_unidade",
           "nodeLineageTag": "752a7ccb-1561-4117-869c-ffd2f2ee4f43",
@@ -128,7 +128,7 @@
         {
           "location": {
             "x": 1391.0943734911923,
-            "y": 1647.0303103607816
+            "y": 1956.6172015720867
           },
           "nodeIndex": "dim_atendente",
           "nodeLineageTag": "a48bbeca-44fc-45ef-ab4e-5c759de8044f",
@@ -141,7 +141,7 @@
         {
           "location": {
             "x": 1040.5150400506036,
-            "y": 1449.7177607406163
+            "y": 1759.3046519519214
           },
           "nodeIndex": "dim_canal_atendimento",
           "nodeLineageTag": "40984181-0b57-4547-a366-88fb23f1bc65",
@@ -154,7 +154,7 @@
         {
           "location": {
             "x": 1373.5460377034956,
-            "y": 986.234913330501
+            "y": 1295.8218045418062
           },
           "nodeIndex": "dim_categoria_reclamacao",
           "nodeLineageTag": "38172b13-488f-4ac8-a47e-8bc090eabe95",
@@ -167,7 +167,7 @@
         {
           "location": {
             "x": 1739.6105025234504,
-            "y": 1182.5141813285236
+            "y": 1492.1010725398287
           },
           "nodeIndex": "dim_coleta",
           "nodeLineageTag": "b3e05b30-5d01-41e9-bf17-bcd38a3d76fd",
@@ -180,7 +180,7 @@
         {
           "location": {
             "x": 1025.5718475073313,
-            "y": 1137.5209289743825
+            "y": 1447.1078201856876
           },
           "nodeIndex": "fast dim_canal_contato",
           "nodeLineageTag": "5ae6d992-11a2-4d26-8995-87feb58f30a5",
@@ -193,7 +193,7 @@
         {
           "location": {
             "x": 1389.0638638375142,
-            "y": 1251.6262785835283
+            "y": 1561.2131697948334
           },
           "nodeIndex": "fato_reclamacao",
           "nodeLineageTag": "3468bc37-e0b1-405f-863a-f04c50a3d5af",
@@ -206,7 +206,7 @@
         {
           "location": {
             "x": 1221.9975992976438,
-            "y": 767.649084841965
+            "y": 1077.23597605327
           },
           "nodeIndex": "DPMO",
           "nodeLineageTag": "d6778c94-4974-4689-b65f-c183c2972ebf",
@@ -219,7 +219,7 @@
         {
           "location": {
             "x": 1478.578244458934,
-            "y": 768.98779451938435
+            "y": 1078.5746857306895
           },
           "nodeIndex": "Sigma",
           "nodeLineageTag": "c5eba149-6347-4ade-ab56-40f43dacc0e5",
@@ -232,7 +232,7 @@
         {
           "location": {
             "x": 967.41695413635352,
-            "y": 771.88295580970691
+            "y": 1081.4698470210119
           },
           "nodeIndex": "SLA",
           "nodeLineageTag": "2366820c-bfe4-4fd7-a623-f6eb387a2a00",
@@ -245,7 +245,7 @@
         {
           "location": {
             "x": 1730.4492122008694,
-            "y": 766.33860097099716
+            "y": 1075.9254921823022
           },
           "nodeIndex": "Reclamação",
           "nodeLineageTag": "d8685c20-cb14-4536-9e5f-2a09d23444c2",
@@ -258,7 +258,7 @@
         {
           "location": {
             "x": 1728.9653412331274,
-            "y": 1019.312391293578
+            "y": 1328.8992825048831
           },
           "nodeIndex": "Tempo",
           "nodeLineageTag": "f49fb545-217c-4403-8c82-c9ab1c64d2f4",
@@ -271,7 +271,7 @@
         {
           "location": {
             "x": 1725.8685670395789,
-            "y": 888.28920580970691
+            "y": 1197.8760970210119
           },
           "nodeIndex": "Atrasos",
           "nodeLineageTag": "410634fe-183e-40e0-9640-691cfb5c7c9b",
@@ -284,7 +284,7 @@
         {
           "location": {
             "x": 972.77179284603039,
-            "y": 619.17378242261032
+            "y": 928.76067363391542
           },
           "nodeIndex": "Exame",
           "nodeLineageTag": "a2b1c398-5a81-4d9f-9269-0969207b636a",
@@ -297,7 +297,7 @@
         {
           "location": {
             "x": 701.93308316861066,
-            "y": 628.40387314841655
+            "y": 937.99076435972165
           },
           "nodeIndex": "NPS",
           "nodeLineageTag": "b690a572-bc4f-4380-a539-37068730be8d",
@@ -310,7 +310,7 @@
         {
           "location": {
             "x": 706.90082510409411,
-            "y": 769.86191246293265
+            "y": 1079.4488036742378
           },
           "nodeIndex": "Resumo Nível Sigma",
           "nodeLineageTag": "54a52a7b-cabb-4a49-ac94-aa058b07c9bb",

@@ -29,9 +29,6 @@ table Reclamação
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: ff988181-059a-4a7c-b3c1-5e9b5d901464
 
-	measure Texto = "A cada 1000 exames realizado"
-		lineageTag: b0687f86-27b1-402b-b661-f2ca4ab144cf
-
 	measure 'Índice de reclamacoes dinamico variacao' = ```
 			
 			VAR VOL = DIVIDE(
@@ -103,6 +100,33 @@ table Reclamação
 			
 			```
 		lineageTag: 08367d2d-55d2-4602-94cd-df508686f779
+
+	measure 'Correlação % Falhas × Reclamações' = ```
+			
+			VAR T0 =
+			    SUMMARIZE (
+			        dim_area_laboratorial,
+			        dim_area_laboratorial[id_area],
+			        "x", CALCULATE ( [Falhas %] ),
+			        "y", CALCULATE ( [Índice de Reclamações] )
+			    )
+			VAR T =
+			    FILTER ( T0, NOT ISBLANK ( [x] ) && NOT ISBLANK ( [y] ) )
+			VAR n = COUNTROWS ( T )
+			VAR avgX = AVERAGEX ( T, [x] )
+			VAR avgY = AVERAGEX ( T, [y] )
+			VAR covXY = AVERAGEX ( T, ( [x] - avgX ) * ( [y] - avgY ) )
+			VAR sdX = SQRT ( AVERAGEX ( T, POWER ( [x] - avgX, 2 ) ) )
+			VAR sdY = SQRT ( AVERAGEX ( T, POWER ( [y] - avgY, 2 ) ) )
+			RETURN
+			IF ( n < 2 || sdX = 0 || sdY = 0, BLANK (), DIVIDE ( covXY, sdX * sdY ) )
+			
+			```
+		formatString: #,0.00
+		lineageTag: d7b4f30a-adf9-4f9e-8ae5-3560761a8331
+
+	measure 'Texto índice de reclamação' = "Reclamações para cada 1.000 exames processados"
+		lineageTag: 6313f3bb-c6b8-4d93-b79f-8157349cded8
 
 	partition Reclamação = m
 		mode: import

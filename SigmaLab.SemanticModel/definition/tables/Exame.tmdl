@@ -2,7 +2,7 @@ table Exame
 	lineageTag: a2b1c398-5a81-4d9f-9269-0969207b636a
 
 	measure Exame = COUNTROWS(fato_exame)
-		formatString: 0
+		formatString: #,0
 		lineageTag: 0243a36a-b5a8-4d7c-9111-5314d6eea962
 
 	partition Exame = m

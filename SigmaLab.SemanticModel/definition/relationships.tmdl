@@ -106,3 +106,9 @@ relationship 7b0548fb-ad9e-5c78-5ca1-8116672f9ac8
 	fromColumn: fato_reclamacao.id_area
 	toColumn: dim_area_laboratorial.id_area
 
+relationship 675065ff-8985-11a8-a62a-ca111b121863
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: fato_reclamacao.id_paciente
+	toColumn: fato_exame.id_paciente
+
