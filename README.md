@@ -1,41 +1,41 @@
 # Sigma FastLab  Dashboard Power BI
 
-Este repositÛrio documenta o painel Sigma FastLab, focado em monitorar o desempenho operacional de coleta, exames e atendimento. Ele oferece uma vis„o executiva com KPIs, tendÍncias e an·lises por unidade, rota e equipes.
+Este reposit√≥rio documenta o painel Sigma FastLab, focado em monitorar o desempenho operacional de coleta, exames e atendimento. Ele oferece uma vis√£o executiva com KPIs, tend√™ncias e an√°lises por unidade, com objetivo de identificar gargalos e melhorias atrav√©s da metodologia Six Sigma.
 
-- VisualizaÁ„o online (Power BI): https://app.powerbi.com/view?r=eyJrIjoiNTNjNmIzNjMtMDgxYy00YTk5LWFjYjktZWQ5M2Y3Njk3NjIwIiwidCI6IjA5ZjRiZmNhLTY3Y2QtNGU0Zi05NjNkLWExYzk1MzEyNmMwNCJ9
-- LicenÁa: MIT (ver arquivo LICENSE)
+- Visualiza√ß√£o online (Power BI): https://app.powerbi.com/view?r=eyJrIjoiNTNjNmIzNjMtMDgxYy00YTk5LWFjYjktZWQ5M2Y3Njk3NjIwIiwidCI6IjA5ZjRiZmNhLTY3Y2QtNGU0Zi05NjNkLWExYzk1MzEyNmMwNCJ9
+- Licen√ßa: MIT (ver arquivo LICENSE)
 
 ## Capa
 
 ![Capa](assets/screenshots/capa.jpg)
 
-## P·ginas do dashboard
+## P√°ginas do dashboard
 
-### P·gina 1
+### P√°gina 1
 
-![P·gina 1](assets/screenshots/pg01.jpg)
+![P√°gina 1](assets/screenshots/pg01.jpg)
 
-### P·gina 2
+### P√°gina 2
 
-![P·gina 2](assets/screenshots/pg02.jpg)
+![P√°gina 2](assets/screenshots/pg02.jpg)
 
 ## Destaques
 
-- KPIs de produÁ„o e atendimento: volume de exames, tempo mÈdio, SLA e qualidade.
-- OperaÁıes e logÌstica: desempenho por unidade, rotas e equipes de coleta/entrega.
-- ExperiÍncia do cliente: indicadores de reclamaÁıes e nÌveis de satisfaÁ„o.
-- TendÍncias e comparativos: an·lise mÍs a mÍs e por categorias (exame, setor, turno).
+- KPIs de produ√ß√£o e atendimento: volume de exames, tempo m√©dio, SLA e qualidade.
+- Opera√ß√µes e log√≠stica: desempenho por unidade, rotas e equipes de coleta/entrega.
+- Experi√™ncia do cliente: indicadores de reclama√ß√µes e n√≠veis de satisfa√ß√£o.
+- Tend√™ncias e comparativos: an√°lise m√™s a m√™s e por categorias (exame, setor, turno).
 
 ## Abrir localmente
 
-Este repositÛrio contÈm imagens e documentaÁ„o. O projeto PBIP (Power BI Project) est· disponÌvel localmente no ambiente de desenvolvimento.
+Este reposit√≥rio cont√©m imagens e documenta√ß√£o. O projeto PBIP (Power BI Project) est√° dispon√≠vel localmente no ambiente de desenvolvimento.
 
 Caso possua o projeto local:
-1. Abra o Power BI Desktop (vers„o atual).
-2. No menu Arquivo > Abrir, selecione o projeto `SigmaLab.pbip` no diretÛrio do projeto.
-3. Atualize as conexıes conforme necess·rio e publique se desejar.
+1. Abra o Power BI Desktop (vers√£o atual).
+2. No menu Arquivo > Abrir, selecione o projeto `SigmaLab.pbip` no diret√≥rio do projeto.
+3. Atualize as conex√µes conforme necess√°rio e publique se desejar.
 
-## Estrutura do repositÛrio
+## Estrutura do reposit√≥rio
 
 ```
 Sigma-FastLab/
@@ -48,10 +48,10 @@ Sigma-FastLab/
  LICENSE
 ```
 
-## LicenÁa
+## Licen√ßa
 
-Este projeto est· licenciado sob a MIT License  vocÍ pode usar, copiar, modificar e distribuir livremente, mantendo os avisos de copyright. Veja o arquivo `LICENSE` para mais detalhes.
+Este projeto est√° licenciado sob a MIT License  voc√™ pode usar, copiar, modificar e distribuir livremente, mantendo os avisos de copyright. Veja o arquivo `LICENSE` para mais detalhes.
 
 ## Contato
 
-Em caso de d˙vidas ou sugestıes, sinta-se ‡ vontade para abrir uma issue ou entrar em contato.
+Em caso de d√∫vidas ou sugest√µes, sinta-se √† vontade para abrir uma issue ou entrar em contato.
